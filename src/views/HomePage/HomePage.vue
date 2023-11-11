@@ -5,6 +5,7 @@
 import HomePage from '@/components/HomePage/Home.vue';
 
 export default {
+  name: 'Page',
   components: {
     HomePage
   },
@@ -14,13 +15,16 @@ export default {
   methods: {
     loadScripts() {
       const scriptUrls = [
-      'homepage/vendor/bootstrap/js/bootstrap.bundle.min.js',
-      'homepage/vendor/aos/aos.js',
-      'homepage/vendor/glightbox/js/glightbox.min.js',
-      'homepage/vendor/swiper/swiper-bundle.min.js',
-      'homepage/vendor/isotope-layout/isotope.pkgd.min.js',
-      'homepage/vendor/php-email-form/validate.js',
-      'homepage/js/main.js',
+      '/homepage/vendor/bootstrap/js/bootstrap.bundle.min.js',
+      '/homepage/vendor/aos/aos.js',
+      '/homepage/vendor/glightbox/js/glightbox.min.js',
+      '/homepage/vendor/swiper/swiper-bundle.min.js',
+      '/homepage/vendor/isotope-layout/isotope.pkgd.min.js',
+      '/homepage/vendor/php-email-form/validate.js',
+      // '/homepage/js/main.js',
+      // 'https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous',
+      // 'https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous',
+      // 'https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous'
       ];
 
       const head = document.getElementsByTagName('head')[0];
@@ -47,6 +51,8 @@ export default {
 @import '@/assets/HomePage/vendor/glightbox/css/glightbox.min.css';
 @import '@/assets/HomePage/vendor/swiper/swiper-bundle.min.css';
 @import '@/assets/HomePage/vendor/remixicon/remixicon.css';
+/* @import url('https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css'); */
+
 @import '@/assets/HomePage/css/main.css';
 </style>
 

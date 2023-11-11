@@ -8,7 +8,7 @@
         <a href="index.html" class="logo d-flex align-items-center">
           <!-- Uncomment the line below if you also wish to use an image logo -->
           <!-- <img src="assets/img/logo.png" alt=""> -->
-          <h1 class="d-flex align-items-center">Nova</h1>
+          <h1 class="d-flex align-items-center">ALLIANZ</h1>
         </a>
 
         <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
@@ -18,30 +18,15 @@
           <ul>
             <li><a href="/" class="active">Home</a></li>
             <li><a href="/AboutPage">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="team.html">Team</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li class="dropdown"><a href="#"><span>Dropdown</span> <i
+            <li><a href="contact.html">Contact</a></li>
+            <li class="dropdown"><a href="#"><span>Info</span> <i
                   class="bi bi-chevron-down dropdown-indicator"></i></a>
               <ul>
                 <li><a href="/LogIn">Log In</a></li>
-                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
-                      class="bi bi-chevron-down dropdown-indicator"></i></a>
-                  <ul>
-                    <li><a href="/register1">Register Form 1</a></li>
-                    <li><a href="#">Deep Dropdown 2</a></li>
-                    <li><a href="#">Deep Dropdown 3</a></li>
-                    <li><a href="#">Deep Dropdown 4</a></li>
-                    <li><a href="#">Deep Dropdown 5</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Dropdown 2</a></li>
-                <li><a href="#">Dropdown 3</a></li>
-                <li><a href="#">Dropdown 4</a></li>
+                <li><a href="/Register">Register</a></li>
               </ul>
             </li>
-            <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav><!-- .navbar -->
 
@@ -54,16 +39,12 @@
       <div class="container">
         <div class="row">
           <div class="col-xl-4">
-            <h2 data-aos="fade-up">Focus On What Matters</h2>
+            <h2 data-aos="fade-up">ALLIANZ PNB</h2>
             <blockquote data-aos="fade-up" data-aos-delay="100">
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis cum recusandae eum laboriosam
-                voluptatem repudiandae odio, vel exercitationem officiis provident minima. </p>
+              <p>Hiring the right people takes time, the right questions, and a healthy dose of curiosity.</p>
             </blockquote>
             <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
               <a href="#about" class="btn-get-started">Get Started</a>
-              <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
-                class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch
-                  Video</span></a>
             </div>
 
           </div>

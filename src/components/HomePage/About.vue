@@ -8,7 +8,7 @@
     <a href="index.html" class="logo d-flex align-items-center">
       <!-- Uncomment the line below if you also wish to use an image logo -->
       <!-- <img src="assets/img/logo.png" alt=""> -->
-      <h1 class="d-flex align-items-center">Nova</h1>
+      <h1 class="d-flex align-items-center">ALLIANZ</h1>
     </a>
 
     <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
@@ -16,31 +16,18 @@
 
     <nav id="navbar" class="navbar">
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/AboutPage" class="active">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="team.html">Team</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-          <ul>
-            <li><a href="#">Dropdown 1</a></li>
-            <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <li><a href="/">Home</a></li>
+            <li><a href="/AboutPage" class="active">About</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="dropdown"><a href="#"><span>Info</span> <i
+                  class="bi bi-chevron-down dropdown-indicator"></i></a>
               <ul>
-                <li><a href="#">Deep Dropdown 1</a></li>
-                <li><a href="#">Deep Dropdown 2</a></li>
-                <li><a href="#">Deep Dropdown 3</a></li>
-                <li><a href="#">Deep Dropdown 4</a></li>
-                <li><a href="#">Deep Dropdown 5</a></li>
+                <li><a href="/LogIn">Log In</a></li>
+                <li><a href="/Register">Register</a></li>
               </ul>
             </li>
-            <li><a href="#">Dropdown 2</a></li>
-            <li><a href="#">Dropdown 3</a></li>
-            <li><a href="#">Dropdown 4</a></li>
           </ul>
-        </li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
     </nav><!-- .navbar -->
 
   </div>
@@ -49,12 +36,12 @@
 <main id="main">
 
   <!-- ======= Breadcrumbs ======= -->
-  <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/about-header.jpg');">
+  <div class="breadcrumbs d-flex align-items-center">
     <div class="container position-relative d-flex flex-column align-items-center">
 
       <h2>About</h2>
       <ol>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li>About</li>
       </ol>
 
@@ -332,3 +319,14 @@
 
 </body>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      imageUrl: 'assets/img/about-header.jpg'
+    };
+  }
+  // ... other component options
+};
+</script>

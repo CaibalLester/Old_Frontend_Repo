@@ -1,10 +1,13 @@
 <template>
-    <section id="bglog" class="d-flex align-items-center justify-content-center">
-        <div class="container">
+     <section id="loginhero" class="loginhero d-flex align-items-center">
+
+        
+<div class="card">
+  <div class="mycontainer">
             <div class="row justify-content-center">
                 <div class="col-md-12 col-lg-10">
-                    <div class="wrap d-md-flex">
-                        <div class="img" :style="imgStyle"></div>
+   
+                       
                         <div class="login-wrap p-4 p-md-5">
                             <div class="d-flex">
                                 <div class="w-100">
@@ -47,12 +50,17 @@
                 </div>
             </div>
         </div>
+
+
+
+
+       
     </section>
 </template>
 <style>
 @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
-@import
+
 </style>
 <script>
 export default {
