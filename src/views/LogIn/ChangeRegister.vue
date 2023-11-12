@@ -13,7 +13,7 @@
                         <div class="login-wrap p-4 p-md-5">
                             <div class="d-flex">
                                 <div class="w-100">
-                                    <h3 class="mb-4">Sign Up</h3>
+                                    <h3 class="mb-4">Change Password</h3>
                                 </div>
                                 <div class="w-100">
                                     <p class="social-media d-flex justify-content-end">
@@ -28,16 +28,8 @@
                                     <input type="text" class="form-control" placeholder="Username" v-model="username" required>
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label class="label" for="name">Email</label>
-                                    <input type="text" class="form-control" placeholder="Email" v-model="email" required>
-                                </div>
-                                <div class="form-group mb-3">
-                                    <label class="label" for="password">Password</label>
-                                    <input type="password" class="form-control" placeholder="Password" v-model="password" required>
-                                </div>
-                                <div class="form-group mb-3">
-                                    <label class="label" for="confirm">Confirm Password</label>
-                                    <input type="password" class="form-control" placeholder="Confirm Password" v-model="confirm" required>
+                                    <label class="label" for="confirm">Change Password</label>
+                                    <input type="password" class="form-control" placeholder="Change Password" v-model="ChangePassword" required>
                                 </div>
                                 <div class="form-group mb-3">
                                     <label class="label" for="role">Role</label>
@@ -49,7 +41,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <button type="submit" class="form-control btn btn-dark rounded submit px-3" href="">Sign Up</button>
+                                    <button type="submit" class="form-control btn btn-dark rounded submit px-3" href="">Submit</button>
                                 </div>
                                
                                 <div class="form-group d-md-flex">

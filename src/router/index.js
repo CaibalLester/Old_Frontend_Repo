@@ -4,6 +4,7 @@ import HomeAgent from '../views/AgentPage/HomeAgent.vue'
 import AboutPage from '../views/HomePage/AboutPage.vue'
 import LogIn from '../views/LogIn/LogIn.vue'
 import Register from '../views/LogIn/Register.vue'
+import ChangeRegister from '../views/LogIn/ChangeRegister.vue'
 import FormA from '../views/AgentPage/FormA.vue'
 import FormB from '../views/AgentPage/FormB.vue'
 import FormC from '../views/AgentPage/FormC.vue'
@@ -31,6 +32,10 @@ const routes = [
   {
     path: '/Register',
     component: Register
+  },
+  {
+    path: '/ChangePassword',
+    component: ChangeRegister
   },
   {
     path: '/formA',
