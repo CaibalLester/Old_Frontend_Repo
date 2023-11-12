@@ -50,9 +50,9 @@
                                
                                 <div class="form-group d-md-flex">
                                     <div class="w-50 text-left">
-                                        <label class="checkbox-wrap checkbox-dark mb-0">Remember Me
-                                            <input type="checkbox" checked>
+                                        <input type="checkbox" checked>
                                             <span class="checkmark"></span>
+                                        <label class="checkbox-wrap checkbox-dark mb-0"> Remember Me
                                         </label>
                                     </div>
                                 </div>
