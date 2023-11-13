@@ -24,12 +24,8 @@
                             </div>
                             <form @submit.prevent="save">
                                 <div class="form-group mb-3">
-                                    <label class="label" for="name">Username</label>
-                                    <input type="text" class="form-control" placeholder="Username" v-model="username" required>
-                                </div>
-                                <div class="form-group mb-3">
                                     <label class="label" for="name">Email</label>
-                                    <input type="text" class="form-control" placeholder="Email" v-model="email" required>
+                                    <input type="text" class="form-control" placeholder="Username" v-model="email" required>
                                 </div>
                                 <div class="form-group mb-3">
                                     <label class="label" for="password">Password</label>
@@ -54,9 +50,9 @@
                                
                                 <div class="form-group d-md-flex">
                                     <div class="w-50 text-left">
-                                        <input type="checkbox" checked>
+                                        <label class="checkbox-wrap checkbox-dark mb-0">Remember Me
+                                            <input type="checkbox" checked>
                                             <span class="checkmark"></span>
-                                        <label class="checkbox-wrap checkbox-dark mb-0"> Remember Me
                                         </label>
                                     </div>
                                 </div>
@@ -73,7 +69,6 @@
 <script>
 
 import axios from 'axios';
-import { SHA256 } from 'crypto-js'; // Import the SHA256 function
 
 export default {
     data() {
@@ -93,10 +88,9 @@ export default {
     methods: {
         async save() {
             try {
-                const hashedpassword = SHA256(this.password).toString(); // Hash the password
-                const ins = await axios.post('save', {
+                const ins = await axios.post('authreg', {
                     email: this.email,
-                    password: hashedpassword,
+                    password: this.password,
                     role: this.role,
                 });
                 this.email =""
