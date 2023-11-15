@@ -8,7 +8,10 @@ import FormA from '../views/AgentPage/FormA.vue'
 import FormB from '../views/AgentPage/FormB.vue'
 import FormC from '../views/AgentPage/FormC.vue'
 import FormD from '../views/AgentPage/FormD.vue'
-import FormE from '../views/AgentPage/FormE.vue'
+import FormE from '../views/AgentPage/FormE.vue'  
+import Dashboard from '../views/Admin/Dashboard.vue'  
+ 
+
 const routes = [
   {
     path: '/',
@@ -52,7 +55,12 @@ const routes = [
     path: '/formE',
     component: FormE
   },
-]
+  {
+    path: '/dashboard',
+    component: Dashboard
+  },
+ 
+];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
