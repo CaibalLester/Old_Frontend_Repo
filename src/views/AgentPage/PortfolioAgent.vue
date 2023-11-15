@@ -2,7 +2,7 @@
     <AgentPage />
   </template>
   <script>
-  import AgentPage from '@/components/AgentPage/HomeAgent.vue';
+  import AgentPage from '@/components/AgentPage/PortfolioAgent.vue';
   
   export default {
     name: 'page',

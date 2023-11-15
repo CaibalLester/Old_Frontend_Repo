@@ -16,10 +16,9 @@
   
           <nav id="navbar" class="navbar">
             <ul>
-              <li><a href="/" class="active">Home</a></li>
-              <li><a href="/AboutPage">About</a></li>
-              <li><a href="portfolio.html">Portfolio</a></li>
-              <li><a href="team.html">Team</a></li>
+              <li><a href="/Agent" class="active">Home</a></li>
+              <li><a href="/AboutAgent">About</a></li>
+              <li><a href="/PortfolioAgent" >Portfolio</a></li>
               <li><a href="contact.html">Contact</a></li>
               <li class="dropdown"><a href="#"><span>Company Forms</span> <i
                     class="bi bi-chevron-down dropdown-indicator"></i></a>
@@ -34,9 +33,9 @@
                       <li><a href="/FormE">Form E</a></li>
                     </ul>
                   </li>
-                  <li><a href="/">Logout</a></li>
                 </ul>
               </li>
+              <li><a href="/">Logout</a></li>
             </ul>
           </nav><!-- .navbar -->
   

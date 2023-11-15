@@ -1,7 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '../views/HomePage/HomePage.vue'
 import HomeAgent from '../views/AgentPage/HomeAgent.vue'
+import PortfolioAgent from '../views/AgentPage/PortfolioAgent.vue'
 import AboutPage from '../views/HomePage/AboutPage.vue'
+import AboutAgent from '../views/AgentPage/AboutPage.vue'
 import LogIn from '../views/LogIn/LogIn.vue'
 import Register from '../views/LogIn/Register.vue'
 import FormA from '../views/AgentPage/FormA.vue'
@@ -21,8 +23,16 @@ const routes = [
     component: HomeAgent
   },
   {
+    path: '/PortfolioAgent',
+    component: PortfolioAgent
+  },
+  {
     path: '/AboutPage',
     component: AboutPage
+  },
+  {
+    path: '/AboutAgent',
+    component: AboutAgent
   },
   {
     path: '/LogIn',

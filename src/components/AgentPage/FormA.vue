@@ -1,7 +1,24 @@
 <template>
-     <section id="myform" class="myform d-flex align-items-center">
 
-        
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <table>
+                <tr>
+                    <td><a class="btn btn-success" href="/Agent">---Back----</a></td>
+                </tr>
+                <tr>
+                    <td><a class="btn btn-danger" href="/">--Logout--</a></td>
+                </tr>
+            </table>
+          </a>
+        </div>
+      </header>
+      <!-- End Header -->
+    
+<section id="myform" class="myform d-flex align-items-center">   
 <div class="card">
   <div class="custom-container">
         <form @submit.prevent="save">
