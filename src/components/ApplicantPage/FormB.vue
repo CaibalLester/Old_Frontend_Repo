@@ -24,102 +24,137 @@
             <fieldset>
                 <h1>APPLICATION FOR INSURANCE AGENT’S LICENSE</h1>
                 <div class="form-group">
-                    <label for="position">Position applying for:</label>
-                    <input type="text" v-model="position" name="position" class="form-control" readonly>
-                </div>
-                <div class="form-group">
-                    <label for="preferredArea">Preferred area:</label>
-                    <input type="text" v-model="preferredArea" name="preferredArea" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label>Source:</label>
-                    <div class="form-check form-check-inline">
-                        <input type="checkbox" v-model="referral" name="source" value="Referral" class="form-check-input">
-                        <label for="referral" class="form-check-label">Referral</label>
-                    </div>
-                    <input type="text" v-model="referralBy" name="referralBy" class="form-control" placeholder="Referral By">
-
-                    <div class="form-check form-check-inline">
-                        <input type="checkbox" v-model="onlineAd" name="source" value="Online Advertisement"
-                            class="form-check-input">
-                        <label for="onlineAd" class="form-check-label">Online Advertisement</label>
-                    </div>
-
-                    <div class="form-check form-check-inline">
-                        <input type="checkbox" v-model="walkIn" name="source" value="Walk-In" class="form-check-input">
-                        <label for="walkIn" class="form-check-label">Walk-In</label>
-                    </div>
-
-                    <div class="form-check form-check-inline">
-                        <input type="checkbox" v-model="othersRef" name="source" value="Others Referal"
-                            class="form-check-input">
-                        <label for="others" class="form-check-label">Others</label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <h2>Personal information</h2>
-                    <label for="name">Name:</label>
+                    <br>
+                    <p>
+                        <h5>To the Insurance Commissioner:</h5><br>
+                                The undersigned hereby applies for a license under the provisions of Chapter IV, Title I of the
+                                Insurance Code, to act as insurance/general agent of <b><u>Allianz PNB Life Insurance, Inc.</u></b>
+                                in respect of the kind of insurance indicated herein:
+                    </p>
+                    <div class="form-section">
+        <div class="form-row">
+            <div class="checkbox-list">
+                <label>
+                    <input type="checkbox" name="request" value="none-life">
+                    NONE LIFE
+                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="request" value="life">
+                    LIFE
+                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="request" value="variable life">
+                    VARIABLE LIFE
+                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="request" value="accident and health">
+                    ACCIDENT AND HEALTH
+                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="request" value="labtest">
+                    OTHER PLEASE SPECIFY: <input type="text" v-model="agencyname" name="others" class="form-control"
+                        placeholder>
+                </label>
+            </div>
+        </div>
+    </div>
+    <p>and for that purpose submits the following statements and information required herein.</p>
+    <input type="text" v-model="agencyname" name="others" class="form-control"
+                        placeholder="Agency Name if any">
+                        <div class="form-group">
+                    <label for="applicant name">Name of Applicant:</label>
                     <input type="text" v-model="fname" name="fullname" class="form-control"
-                        placeholder="Last Name First Name Middle Name Sufix">
+                        placeholder="Last Name || First Name || Middle Name || Sufix">
+                        <br>
+            
+                <label for="agentType">Agent Type:</label>
+                <br>
+            <div class="form-row">
+            <div class="checkbox-list">
+                <label>
+                    <input type="checkbox" name="request" value="none-life">
+                    Ordinary Agent
+                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="request" value="life">
+                    General Agent
+                </label>
+            </div>
+        </div>
 
-                    <label for="nickname">Nickname:</label>
-                    <input type="text" v-model="nickname" name="nickname" class="form-control" placeholder="Nickname">
+                    <label for="nickname">Home Address:</label>
+                    <input type="text" v-model="homeaddress" name="homeaddress" class="form-control" placeholder="Homeaddress">
+                    <label for="nickname">Zip code:</label>
+                    <input type="text" v-model="zip" name="zip" class="form-control" placeholder="Zip code">
 
-                    <label for="birthdate">Birth date:</label>
-                    <input type="date" v-model="birthdate" name="birthdate" class="form-control">
+                    <label for="birthdate">Business Address:</label>
+                    <input type="text" v-model="businessAddress" name="businessAddress" class="form-control" placeholder="Business Address">
 
-                    <label for="placeOfBirth">Place of birth:</label>
-                    <input type="text" v-model="placeOfBirth" name="placeOfBirth" class="form-control">
+                    <label for="gender">T.I.N.:</label>
+                    <input type="text" v-model="tin" name="tin" class="form-control" placeholder="T.I.N.">
 
-                    <label for="gender">Gender:</label>
-                    <input type="text" v-model="gender" name="gender" class="form-control" placeholder="Male or Female">
+                    <label for="bloodType">E-mail Address:</label>
+                    <input type="text" v-model="emailAddress" name="emailAddress" class="form-control" placeholder="Email Address">
 
-                    <label for="bloodType">Blood Type:</label>
-                    <input type="text" v-model="bloodType" name="bloodType" class="form-control" placeholder="Blood type">
+                    <label for="homeAddress">Mobile Number:</label>
+                    <input type="text" v-model="mobileNumber" name="mobileNumber" class="form-control" placeholder="Mobile Number">
+                    <br>
+                    <label for="birthdate">Birth<br> a)date:</label>
+                    <input type="date" v-model="date" name="date" class="form-control">
+                    <label for="palce">b)place:</label>
+                    <input type="text" v-model="place" name="place" class="form-control" placeholder="place">
 
-                    <label for="homeAddress">Home address:</label>
-                    <input type="text" v-model="homeAddress" name="homeAddress" class="form-control"
-                        placeholder=" No. Street Subdivision/Barangay City/Municipal/Province">
+                    <label for="landline">Citizanship:</label>
+                    <input type="text" v-model="landline" name="citizenship" class="form-control" placeholder="Citizenship">
 
-                    <label for="mobileNo">Mobile Number:</label>
-                    <input type="text" v-model="mobileNo" name="mobileNo" class="form-control" placeholder="Mobile Number">
+                    <label for="email">Sex:</label>
+                    <input type="sex" v-model="email" name="sex" class="form-control" placeholder="Sex">
 
-                    <label for="landline">Landline:</label>
-                    <input type="text" v-model="landline" name="landline" class="form-control" placeholder="Landline">
+                    <label for="civilStatus">Civil Status:</label>
+                    <input type="civilStatus" v-model="email" name="civilStatus" class="form-control" placeholder="Civil Status">
+                    <br>
 
-                    <label for="email">Email Address:</label>
-                    <input type="email" v-model="email" name="email" class="form-control" placeholder="Email">
-                </div>
-                <div class="form-group">
-                    <label for="citizenship">Citizenship:</label><br>
-                    <div class="form-check form-check-inline">
-                        <input type="checkbox" v-model="citizenship" name="citizenship" value="citizenship"
-                            class="form-check-input">
-                        <label for="filipino" class="form-check-label">Filipino</label>
-                    </div>
-                    <input type="text" v-model="otherscitizenship" name="others" class="form-control"
-                        placeholder="If Other Please Please Include Here">
-
-                    <label for="naturalizationInfo">If naturalized citizen of the Philippines, give date and place of
-                        naturalization and attached photocopy of certificate of naturalization:</label>
-                    <input type="text" v-model="naturalizationInfo" name="naturalizationInfo" class="form-control">
-
-                    <label for="maritalStatus">Marital Status:</label>
-                    <input type="text" v-model="maritalStatus" name="maritalStatus" class="form-control">
-
-                    <div id="ifMarried">
-                        <label for="maidenName">If Married, a) Maiden Name</label>
+                    <div id="fMarried">
+                        <label for="maidenName">If Married:<br> a) Maiden Name</label>
                         <input type="text" v-model="maidenName" name="maidenName" class="form-control">
 
                         <label for="spouseName">b) Name of Spouse:</label>
                         <input type="text" v-model="spouseName" name="spouseName" class="form-control">
                     </div>
-
-                    <label for="sssNo">SSS No.:</label>
-                    <input type="text" v-model="sssNo" name="sssNo" class="form-control">
-
-                    <label for="tin">Tax Identification No.:</label>
-                    <input type="text" v-model="tin" name="tin" class="form-control">
+                    <label for="email">If naturalized citizen of the Philippines, give date and place of naturalization and attach photocopy 
+                                        of certificate of naturalization.</label>
+                    <input type="naturalized" v-model="email" name="naturalize" class="form-control" placeholder="N/A">
+                    <br>
+                </div>
+                <p>---------------------------------------------------------------------------------------------------------------------</p>
+                <h5><b><u>FOR IC USE ONLY</u></b></h5>
+                    <label for="verify">Verified by:</label>
+                    <input type="text" v-model="tin" name="verified" class="form-control">
+                    <label for="Date">Date:</label>
+                    <input type="date" v-model="date" name="date" class="form-control">
+                    <label for="processed">Processed by:</label>
+                    <input type="text" v-model="tin" name="processed" class="form-control">
+                    <label for="Date">Date:</label>
+                    <input type="date" v-model="date" name="date" class="form-control">
+                    <label for="approved">Approved by:</label>
+                    <input type="text" v-model="tin" name="approved" class="form-control">
+                    <label for="Date">Date:</label>
+                    <input type="date" v-model="date" name="date" class="form-control">
+                    <label for="license">License Fee:</label>
+                    <input type="text" v-model="tin" name="license" class="form-control">
+                    <label for="Or">OR No.:</label>
+                    <input type="text" v-model="tin" name="Or" class="form-control">
+                    <label for="Date">Date:</label>
+                    <input type="date" v-model="date" name="date" class="form-control">
+                    <label for="Ca">CA No.:</label>
+                    <input type="text" v-model="tin" name="Ca" class="form-control">
+                    <label for="remarks">Remarks:</label>
+                    <input type="text" v-model="tin" name="remarks" class="form-control">
                 </div>
                 <input type="submit" value="Submit" class="btn btn-primary">
             </fieldset>
