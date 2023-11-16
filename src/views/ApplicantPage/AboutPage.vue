@@ -3,7 +3,7 @@
     </template>
     
     <script>
-    import AboutApplicant from '@/components/AgentPage/About.vue';
+    import AboutApplicant from '@/components/ApplicantPage/About.vue';
     
     export default {
       components: {

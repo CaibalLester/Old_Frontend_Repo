@@ -12,11 +12,25 @@
   
           <nav id="navbar" class="navbar">
             <ul>
-              <li> <a  class="logo d-flex align-items-center" href="/Agent"> <h1 class="d-flex align-items-right">ALLIANZ</h1></a></li>
-              <li><a href="/Agent">Home</a></li>
-              <li><a href="/AboutAgent">About</a></li>
-              <li><a href="/PortfolioAgent" class="active">Portfolio</a></li>
-              <li><a href="#" >Commission</a></li>
+              <li> <a  class="logo d-flex align-items-center"> <h1 class="d-flex align-items-right">ALLIANZ</h1></a></li>
+              <li><a href="/Applicant">Home</a></li>
+              <li><a href="/AboutApplicant">About</a></li>
+              <li><a href="/PortfolioApplicant" class="active">Portfolio</a></li>
+              <li class="dropdown"><a href="#"><span>Company Forms</span> <i
+                    class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li class="dropdown"><a href="#"><span>Forms</span> <i
+                        class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                      <li><a href="/FormA">Form A</a></li>
+                      <li><a href="/FormB">Form B</a></li>
+                      <li><a href="/FormC">Form C</a></li>
+                      <li><a href="/FormD">Form D</a></li>
+                      <li><a href="/FormE">Form E</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
               <li><a href="/">Logout</a></li>
             </ul>
           </nav><!-- .navbar -->
@@ -25,8 +39,8 @@
       </header>
       <!-- End Header -->
   
-     <!-- ======= myagentport Section ======= -->
-<section id="myagentport" class="myagentport d-flex align-items-center">
+     <!-- ======= myport Section ======= -->
+<section id="myport" class="myport d-flex align-items-center">
   <div class="container">
 
         <div class="row">
@@ -49,27 +63,38 @@
             </div>
           </div>
           <!-- Right Card -->
-          <div class="col-md-6">
-            <div class="card">
+            <div class="col-md-6">
+              <div class="card">
                 <h2 data-aos="fade-up">Professional Info</h2>
-                <form action="">
-                    <br>
-                    <label for="ProfessionalMembership">Professional Membership ID:</label>
-                    <input type="text"  name="ProfessionalMembership" class="form-control" placeholder="Professional Membership ID">     
-                    <label for="supervisorname: ">Supervisor's Name:</label>
-                    <input type="text" name="supervisorname" class="form-control" placeholder="Supervisor's Name">
-                    <label for="emergencycontact">Emergency Contact Number:</label>
-                    <input type="text"  name="emergencycontact" class="form-control" placeholder="Emergency Contact Number">
-                    <br><input type="submit" value="Save" class="btn btn-dark center"><br>
+                <form action="" enctype="multipart/form-data" method="post">
+                  <br>
+                  <label for="supervisorname">Supervisor's Name:</label>
+                  <input type="text" name="supervisorname" class="form-control" placeholder="Supervisor's Name">
+
+                  <label for="fileUpload">Upload File:</label>
+                  <input type="file" name="fileUpload" accept=".pdf, .doc, .docx, .txt" class="form-control">
+
+
+                  <label for="imageUpload">E-Signiture:</label>
+                  <input type="file" name="imageUpload" accept="image/*" class="form-control">
+
+                  <br>
+                  <input type="submit" value="Save" class="btn btn-dark center"><br>
                 </form>
+              </div>
             </div>
-          </div>
 
        
     </div>
   </div>
-</section><!-- End myagentport Section -->
+</section><!-- End myport Section -->
 
+
+
+  
+     
+  
+       
   
     <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
         class="bi bi-arrow-up-short"></i></a>

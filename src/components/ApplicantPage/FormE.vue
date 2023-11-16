@@ -6,7 +6,7 @@
           <a href="index.html" class="logo d-flex align-items-center">
             <table>
                 <tr>
-                    <td><a class="btn btn-success" href="/Agent">---Back----</a></td>
+                    <td><a class="btn btn-success" href="/Applicant">---Back----</a></td>
                 </tr>
                 <tr>
                     <td><a class="btn btn-danger" href="/">--Logout--</a></td>

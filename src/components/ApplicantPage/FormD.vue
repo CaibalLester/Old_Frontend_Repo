@@ -6,7 +6,7 @@
           <a href="index.html" class="logo d-flex align-items-center">
             <table>
                 <tr>
-                    <td><a class="btn btn-success" href="/Agent">---Back----</a></td>
+                    <td><a class="btn btn-success" href="/Applicant">---Back----</a></td>
                 </tr>
                 <tr>
                     <td><a class="btn btn-danger" href="/">--Logout--</a></td>
@@ -17,12 +17,12 @@
       </header>
       <!-- End Header -->
 
-<section id="myform" class="myform d-flex align-items-center">
+<section id="myform" class="myform d-flex align-items-center">  
 <div class="card">
     <div class="custom-container">
         <form @submit.prevent="save">
             <fieldset>
-                <h1>Enrollment Form</h1>
+                <h1>AFFIDAVIT OF NON FILING</h1>
                 <div class="form-group">
                     <label for="position">Position applying for:</label>
                     <input type="text" v-model="position" name="position" class="form-control" readonly>

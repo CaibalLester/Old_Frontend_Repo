@@ -779,6 +779,126 @@ section {
 
 
 /*--------------------------------------------------------------
+# myagent Section
+--------------------------------------------------------------*/
+.myagent {
+  width: 100%;
+  min-height: 100vh;
+  background: url("../img/images7.png") top center;
+  background-size: cover;
+  position: relative;
+  padding: 120px 0;
+  z-index: 3;
+}
+
+@media (min-width: 1034px) {
+  .myagent:after {
+    position: absolute;
+    content: "";
+    width: 40%;
+    background: var(--color-secondary);
+    top: 0;
+    bottom: 0;
+  }
+}
+
+.myagent:before {
+  position: absolute;
+  content: "";
+  background: rgba(27, 47, 69, 0.6);
+  inset: 0;
+}
+
+@media (max-width: 1034px) {
+  .myagent:before {
+    background: rgba(27, 47, 69, 0.7);
+  }
+}
+
+.myagent .container {
+  z-index: 1;
+}
+
+@media (min-width: 1365px) {
+  .myagent {
+    background-attachment: fixed;
+  }
+}
+
+.myagent h2 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+  font-family: var(--font-secondary);
+}
+
+.myagent blockquote {
+  color: #fff;
+  padding-left: 20px;
+  font-size: 15px;
+  font-family: var(--font-default);
+  border-left: 2px solid var(--color-primary);
+  margin: 40px 0;
+}
+
+.myagent .btn-get-started {
+  font-family: var(--font-secondary);
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: #fff;
+  background: var(--color-primary);
+}
+
+.myagent .btn-get-started:hover {
+  background: rgba(86, 184, 230, 0.8);
+}
+
+.myagent .btn-watch-video {
+  font-size: 16px;
+  transition: 0.5s;
+  margin-left: 25px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+}
+
+.myagent .btn-watch-video i {
+  color: var(--color-primary);
+  font-size: 32px;
+  transition: 0.3s;
+  line-height: 0;
+  margin-right: 8px;
+}
+
+.myagent .btn-watch-video:hover {
+  color: #fff;
+}
+
+.myagent .btn-watch-video:hover i {
+  color: #82cbed;
+}
+
+@media (max-width: 640px) {
+  .myagent h2 {
+    font-size: 36px;
+    line-height: 1;
+  }
+
+  .myagent .btn-get-started,
+  .myagent .btn-watch-video {
+    font-size: 13px;
+  }
+}
+
+
+
+/*--------------------------------------------------------------
 # myport Section
 --------------------------------------------------------------*/
 .myport {
@@ -914,6 +1034,148 @@ section {
   }
 
   .myport .card h3 {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+}
+
+
+
+/*--------------------------------------------------------------
+# myagentport Section
+--------------------------------------------------------------*/
+.myagentport {
+  width: 100%;
+  min-height: 100vh;
+  background: url("../img/images11.jpg") top center;
+  background-size: cover;
+  position: relative;
+  padding: 120px 0;
+  z-index: 3;
+}
+
+
+.myagentport:before {
+  position: absolute;
+  content: "";
+  background: rgba(27, 47, 69, 0.6);
+  inset: 0;
+}
+
+@media (max-width: 1034px) {
+  .myagentport:before {
+    background: rgba(27, 47, 69, 0.7);
+  }
+}
+
+.myagentport .container {
+  z-index: 1;
+}
+
+@media (min-width: 1365px) {
+  .myagentport {
+    background-attachment: fixed;
+  }
+}
+
+.myagentport h2 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+  font-family: var(--font-secondary);
+}
+
+.myagentport blockquote {
+  color: #fff;
+  padding-left: 20px;
+  font-size: 15px;
+  font-family: var(--font-default);
+  border-left: 2px solid var(--color-primary);
+  margin: 40px 0;
+}
+
+.myagentport .btn-get-started {
+  font-family: var(--font-secondary);
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: #fff;
+  background: var(--color-primary);
+}
+
+.myagentport .btn-get-started:hover {
+  background: rgba(86, 184, 230, 0.8);
+}
+
+.myagentport .btn-watch-video {
+  font-size: 16px;
+  transition: 0.5s;
+  margin-left: 25px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+}
+
+.myagentport .btn-watch-video i {
+  color: var(--color-primary);
+  font-size: 32px;
+  transition: 0.3s;
+  line-height: 0;
+  margin-right: 8px;
+}
+
+.myagentport .btn-watch-video:hover {
+  color: #fff;
+}
+
+.myagentport .btn-watch-video:hover i {
+  color: #82cbed;
+}
+
+@media (max-width: 640px) {
+  .myagentport h2 {
+    font-size: 36px;
+    line-height: 1;
+  }
+
+  .myagentport .btn-get-started,
+  .myagentport .btn-watch-video {
+    font-size: 13px;
+  }
+}
+
+.myagentport .card {
+  width: 100%;
+  max-width: none; /* Allow the card to take up the full width */
+  background: rgb(143, 161, 180);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 40px;
+  box-sizing: border-box;
+}
+
+
+.myagentport .card h3 {
+  color: #333;
+  font-size: 18px; /* Increase the font size for better readability on smaller screens */
+}
+
+.myagentport .card p {
+  color: #555;
+  font-size: 14px;
+}
+
+@media (max-width: 767px) {
+  .myagentport .card {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .myagentport .card h3 {
     font-size: 16px; /* Adjust font size for smaller screens */
   }
 }

@@ -1,8 +1,8 @@
 <template>
     <body class="page-about">
 
-       <!-- ======= Header ======= -->
-       <header id="header" class="header d-flex align-items-center fixed-top">
+      <!-- ======= Header ======= -->
+      <header id="header" class="header d-flex align-items-center fixed-top">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
           <a  class="logo d-flex align-items-center"></a>
@@ -12,11 +12,25 @@
   
           <nav id="navbar" class="navbar">
             <ul>
-              <li> <a  class="logo d-flex align-items-center" href="/Agent"> <h1 class="d-flex align-items-right">ALLIANZ</h1></a></li>
-              <li><a href="/Agent">Home</a></li>
-              <li><a href="/AboutAgent" class="active">About</a></li>
-              <li><a href="/PortfolioAgent" >Portfolio</a></li>
-              <li><a href="#" >Commission</a></li>
+              <li> <a  class="logo d-flex align-items-center"> <h1 class="d-flex align-items-right">ALLIANZ</h1></a></li>
+              <li><a href="/Applicant">Home</a></li>
+              <li><a href="/AboutApplicant" class="active">About</a></li>
+              <li><a href="/PortfolioApplicant" >Portfolio</a></li>
+              <li class="dropdown"><a href="#"><span>Company Forms</span> <i
+                    class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li class="dropdown"><a href="#"><span>Forms</span> <i
+                        class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                      <li><a href="/FormA">Form A</a></li>
+                      <li><a href="/FormB">Form B</a></li>
+                      <li><a href="/FormC">Form C</a></li>
+                      <li><a href="/FormD">Form D</a></li>
+                      <li><a href="/FormE">Form E</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
               <li><a href="/">Logout</a></li>
             </ul>
           </nav><!-- .navbar -->
@@ -32,7 +46,7 @@
 
       <h2>About</h2>
       <ol>
-        <li><a href="/Agent">Home</a></li>
+        <li><a href="/Applicant">Home</a></li>
         <li>About</li>
       </ol>
 

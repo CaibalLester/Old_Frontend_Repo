@@ -1,13 +1,13 @@
 <template>
-    <AgentPage />
+    <ApplicantPage />
   </template>
   <script>
-  import AgentPage from '@/components/AgentPage/FormD.vue';
+  import ApplicantPage from '@/components/ApplicantPage/HomeApplicant.vue';
   
   export default {
     name: 'page',
     components: {
-      AgentPage
+      ApplicantPage
     },
     mounted() {
       this.loadScripts();

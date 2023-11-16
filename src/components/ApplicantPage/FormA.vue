@@ -1,12 +1,13 @@
 <template>
-    
+
+
     <!-- ======= Header ======= -->
     <header id="header" class="header d-flex align-items-center fixed-top">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
           <a href="index.html" class="logo d-flex align-items-center">
             <table>
                 <tr>
-                    <td><a class="btn btn-success" href="/Agent">---Back----</a></td>
+                    <td><a class="btn btn-success" href="/Applicant">---Back----</a></td>
                 </tr>
                 <tr>
                     <td><a class="btn btn-danger" href="/">--Logout--</a></td>
@@ -16,13 +17,13 @@
         </div>
       </header>
       <!-- End Header -->
-
+    
 <section id="myform" class="myform d-flex align-items-center">   
 <div class="card">
   <div class="custom-container">
         <form @submit.prevent="save">
             <fieldset>
-                <h1>APPLICATION FOR INSURANCE AGENT’S LICENSE</h1>
+                <h1>LIFE CHANGER FORM</h1>
                 <div class="form-group">
                     <label for="position">Position applying for:</label>
                     <input type="text" v-model="position" name="position" class="form-control" readonly>
@@ -125,8 +126,8 @@
             </fieldset>
         </form>
     </div>
-    </div>
-    </section>
+</div>
+</section>
 </template>
 <style>
 @import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');

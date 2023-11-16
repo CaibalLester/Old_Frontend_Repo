@@ -1,16 +1,19 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '../views/HomePage/HomePage.vue'
+import HomeApplicant from '../views/ApplicantPage/HomeApplicant.vue'
 import HomeAgent from '../views/AgentPage/HomeAgent.vue'
+import PortfolioApplicant from '../views/ApplicantPage/PortfolioApplicant.vue'
 import PortfolioAgent from '../views/AgentPage/PortfolioAgent.vue'
 import AboutPage from '../views/HomePage/AboutPage.vue'
+import AboutApplicant from '../views/ApplicantPage/AboutPage.vue'
 import AboutAgent from '../views/AgentPage/AboutPage.vue'
 import LogIn from '../views/LogIn/LogIn.vue'
 import Register from '../views/LogIn/Register.vue'
-import FormA from '../views/AgentPage/FormA.vue'
-import FormB from '../views/AgentPage/FormB.vue'
-import FormC from '../views/AgentPage/FormC.vue'
-import FormD from '../views/AgentPage/FormD.vue'
-import FormE from '../views/AgentPage/FormE.vue'
+import FormA from '../views/ApplicantPage/FormA.vue'
+import FormB from '../views/ApplicantPage/FormB.vue'
+import FormC from '../views/ApplicantPage/FormC.vue'
+import FormD from '../views/ApplicantPage/FormD.vue'
+import FormE from '../views/ApplicantPage/FormE.vue'
 const routes = [
   {
     path: '/',
@@ -18,9 +21,17 @@ const routes = [
     component: HomePage
   },
   {
-    path: '/Agent',
+    path: '/Applicant',
     name : 'page',
+    component: HomeApplicant
+  },
+  {
+    path: '/Agent',
     component: HomeAgent
+  },
+  {
+    path: '/PortfolioApplicant',
+    component: PortfolioApplicant
   },
   {
     path: '/PortfolioAgent',
@@ -29,6 +40,10 @@ const routes = [
   {
     path: '/AboutPage',
     component: AboutPage
+  },
+  {
+    path: '/AboutApplicant',
+    component: AboutApplicant
   },
   {
     path: '/AboutAgent',

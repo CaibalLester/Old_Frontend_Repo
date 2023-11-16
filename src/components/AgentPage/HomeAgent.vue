@@ -16,21 +16,7 @@
               <li><a href="/Agent" class="active">Home</a></li>
               <li><a href="/AboutAgent">About</a></li>
               <li><a href="/PortfolioAgent" >Portfolio</a></li>
-              <li class="dropdown"><a href="#"><span>Company Forms</span> <i
-                    class="bi bi-chevron-down dropdown-indicator"></i></a>
-                <ul>
-                  <li class="dropdown"><a href="#"><span>Forms</span> <i
-                        class="bi bi-chevron-down dropdown-indicator"></i></a>
-                    <ul>
-                      <li><a href="/FormA">Form A</a></li>
-                      <li><a href="/FormB">Form B</a></li>
-                      <li><a href="/FormC">Form C</a></li>
-                      <li><a href="/FormD">Form D</a></li>
-                      <li><a href="/FormE">Form E</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
+              <li><a href="#" >Commission</a></li>
               <li><a href="/">Logout</a></li>
             </ul>
           </nav><!-- .navbar -->
@@ -39,22 +25,22 @@
       </header>
       <!-- End Header -->
   
-      <!-- ======= myhero Section ======= -->
-      <section id="myhero" class="myhero d-flex align-items-center">
+      <!-- ======= myagent Section ======= -->
+      <section id="myagent" class="myagent d-flex align-items-center">
         <div class="container">
           <div class="row">
             <div class="col-xl-4">
               <h2 data-aos="fade-up">Welcome Agent!</h2>
               <blockquote data-aos="fade-up" data-aos-delay="100">
-                <p>Your success in life isn't based on your ability to simply change. It is based on your ability to change faster than your competition, customers, and business.</p>
+                <p>Success in securing the job isn't solely dependent on your capacity to merely adapt. It hinges on your ability to adapt more swiftly than other applicants, aligning with the evolving needs and expectations of employers and the dynamic nature of the job market.</p>
               </blockquote>
               <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
-                <a href="/PortfolioAgent" class="btn-get-started">Get Started</a>
+                <a href="/PortfolioApplicant" class="btn-get-started">Get Started</a>
               </div>
             </div>
           </div>
         </div>
-      </section><!-- End myhero Section -->
+      </section><!-- End myagent Section -->
   
   
   
