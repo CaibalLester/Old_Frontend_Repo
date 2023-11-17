@@ -17,13 +17,15 @@ import FormE from '../views/ApplicantPage/FormE.vue'
 const routes = [
   {
     path: '/',
-    name : 'Page',
+    name: 'Page',
     component: HomePage
   },
   {
     path: '/Applicant',
-    name : 'page',
-    component: HomeApplicant
+    name: 'page',
+    component: HomeApplicant,
+    meta: { requiresAuth: true }
+
   },
   {
     path: '/Agent',
@@ -84,4 +86,20 @@ const router = createRouter({
   routes
 })
 
+router.beforeEach((to, from, next) => {
+  const pasok = checkUserLogin();
+  if (to.matched.some((record) => record.meta.requiresAuth)) {
+    if (!pasok) {
+      next("/login")
+    } else {
+      next();
+    }
+  } else {
+    next();
+  }
+});
+function checkUserLogin() {
+  const userToken = sessionStorage.getItem("jwt");
+  return !!userToken;
+}
 export default router

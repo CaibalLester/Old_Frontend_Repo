@@ -1,11 +1,11 @@
 <template>
-     <section id="loginhero" class="loginhero d-flex align-items-center">
-       
-<div class="card">
-  <div class="mycontainer">
-            <div class="row justify-content-center">
-                <div class="col-md-12 col-lg-10">
-   
+    <section id="loginhero" class="loginhero d-flex align-items-center">
+
+        <div class="card">
+            <div class="mycontainer">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 col-lg-10">
+
                         <div class="login-wrap p-4 p-md-5">
                             <div class="d-flex">
                                 <div class="w-100">
@@ -18,19 +18,21 @@
                                     </p><br>
                                 </div>
                             </div>
-                            <form action="#" class="signin-form">
+                            <form @submit.prevent="login" class="signin-form">
                                 <div class="form-group mb-3">
-                                    <label class="label" for="name">Username</label>
-                                    <input type="text" class="form-control" placeholder="Username" required>
+                                    <label class="label" for="name">Email</label>
+                                    <input type="text" v-model="email" class="form-control" placeholder="Email" required>
                                 </div>
                                 <div class="form-group mb-3">
                                     <label class="label" for="password">Password</label>
-                                    <input type="password" class="form-control" placeholder="Password" required>
+                                    <input type="password" v-model="password" class="form-control" placeholder="Password"
+                                        required>
                                 </div><br>
                                 <div class="form-group">
-                                    <button type="submit" class="form-control btn btn-dark rounded submit px-3" href="">Sign In</button>
+                                    <button type="submit" class="form-control btn btn-dark rounded submit px-3" href="">Sign
+                                        In</button>
                                 </div>
-                               
+
                                 <div class="form-group d-md-flex">
                                     <div class="w-50 text-left">
                                         <label class="checkbox-wrap checkbox-dark mb-0">Remember Me
@@ -54,9 +56,8 @@
 <style>
 @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
-
 </style>
-<script>
+<!-- <script>
 export default {
   data() {
     return {
@@ -68,4 +69,33 @@ export default {
     };
   }
 };
-</script>
+</script> -->
+
+<script>
+
+import router from '@/router';
+import axios from 'axios';
+export default {
+    data() {
+        return {
+            email: '',
+            password: '',
+            message: [],
+        }
+    },
+    methods: {
+        async login() {
+            const data = await axios.post("login", {
+                email: this.email,
+                password: this.password
+            });
+            this.message = data.data.msg;
+            if (data.data.msg === 'okay') {
+                sessionStorage.setItem("jwt", data.data.token)
+                router.push('/Applicant');
+            }
+        }
+    }
+}
+
+</script> 
