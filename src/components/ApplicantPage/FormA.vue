@@ -26,7 +26,7 @@
                 <h1>LIFE CHANGER FORM</h1>
                 <div class="form-group">
                     <label for="position">Position applying for:</label>
-                    <input type="text" v-model="position" name="position" class="form-control" readonly>
+                    <input type="text" v-model="position" name="position" placeholder="Agent" class="form-control" readonly>
                 </div>
                 <div class="form-group">
                     <label for="preferredArea">Preferred area:</label>
@@ -34,6 +34,7 @@
                 </div>
                 <div class="form-group">
                     <label>Source:</label>
+
                     <div class="form-check form-check-inline">
                         <input type="checkbox" v-model="referral" name="source" value="Referral" class="form-check-input">
                         <label for="referral" class="form-check-label">Referral</label>
@@ -41,22 +42,21 @@
                     <input type="text" v-model="referralBy" name="referralBy" class="form-control" placeholder="Referral By">
 
                     <div class="form-check form-check-inline">
-                        <input type="checkbox" v-model="onlineAd" name="source" value="Online Advertisement"
-                            class="form-check-input">
+                        <input type="radio" v-model="selectedSource" name="source" value="Online Advertisement" class="form-check-input">
                         <label for="onlineAd" class="form-check-label">Online Advertisement</label>
                     </div>
 
                     <div class="form-check form-check-inline">
-                        <input type="checkbox" v-model="walkIn" name="source" value="Walk-In" class="form-check-input">
+                        <input type="radio" v-model="selectedSource" name="source" value="Walk-In" class="form-check-input">
                         <label for="walkIn" class="form-check-label">Walk-In</label>
                     </div>
 
                     <div class="form-check form-check-inline">
-                        <input type="checkbox" v-model="othersRef" name="source" value="Others Referal"
-                            class="form-check-input">
+                        <input type="radio" v-model="selectedSource" name="source" value="Others Referral" class="form-check-input">
                         <label for="others" class="form-check-label">Others</label>
                     </div>
                 </div>
+
                 <div class="form-group">
                     <h2>Personal information</h2>
                     <label for="name">Name:</label>
@@ -72,11 +72,29 @@
                     <label for="placeOfBirth">Place of birth:</label>
                     <input type="text" v-model="placeOfBirth" name="placeOfBirth" class="form-control">
 
-                    <label for="gender">Gender:</label>
-                    <input type="text" v-model="gender" name="gender" class="form-control" placeholder="Male or Female">
+                    <div class="form-group">
+                        <label for="gender">Gender:</label>
+                        <select v-model="gender" name="gender" class="form-control" required>
+                            <option value="" disabled>Select gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
 
+                    <div class="form-group">
                     <label for="bloodType">Blood Type:</label>
-                    <input type="text" v-model="bloodType" name="bloodType" class="form-control" placeholder="Blood type">
+                    <select v-model="bloodType" name="bloodType" class="form-control" required>
+                        <option value="" disabled>Select blood type</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
+                </div>
 
                     <label for="homeAddress">Home address:</label>
                     <input type="text" v-model="homeAddress" name="homeAddress" class="form-control"
@@ -106,7 +124,14 @@
                     <input type="text" v-model="naturalizationInfo" name="naturalizationInfo" class="form-control">
 
                     <label for="maritalStatus">Marital Status:</label>
-                    <input type="text" v-model="maritalStatus" name="maritalStatus" class="form-control">
+                        <select v-model="maritalStatus" name="maritalStatus" class="form-control">
+                            <option value="" disabled>Select marital status</option>
+                            <option value="single">Single</option>
+                            <option value="married">Married</option>
+                            <option value="divorced">Divorced</option>
+                            <option value="widowed">Widowed</option>
+                        </select>
+
 
                     <div id="ifMarried">
                         <label for="maidenName">If Married, a) Maiden Name</label>
@@ -129,80 +154,117 @@
 </div>
 </section>
 </template>
+
 <style>
-@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
+  @import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
 </style>
 
 <script>
-import axios from 'axios';
+  import axios from 'axios';
 
-export default {
+  export default {
     data() {
-        return {
-            position: "Agent",
-            preferredArea: "",
-            referral: "",
-            referralBy: "",
-            onlineAd: "",
-            walkIn: "",
-            othersRef: "",
-            fname: "",
-            nickname: "",
-            birthdate: "",
-            placeOfBirth: "",
-            gender: "",
-            bloodType: "",
-            homeAddress: "",
-            mobileNo: "",
-            landline: "",
-            email: "",
-            citizenship: "",
-            othersCitizenship: "",
-            naturalizationInfo: "",
-            maritalStatus: "",
-            maidenName: "",
-            spouseName: "",
-            sssNo: "",
-            tin: ""
-        }
+      return {
+        position: "Agent",
+        preferredArea: "",
+        referral: "",
+        referralBy: "",
+        onlineAd: "",
+        walkIn: "",
+        othersRef: "",
+        fname: "",
+        nickname: "",
+        birthdate: "",
+        placeOfBirth: "",
+        gender: "",
+        bloodType: "",
+        homeAddress: "",
+        mobileNo: "",
+        landline: "",
+        email: "",
+        citizenship: "",
+        othersCitizenship: "",
+        naturalizationInfo: "",
+        maritalStatus: "",
+        maidenName: "",
+        spouseName: "",
+        sssNo: "",
+        tin: ""
+      };
+    },
+
+    created() {
+      this.resetForm();
     },
 
     methods: {
-        async save() {
-            try {
-                const ins = await axios.post('save', {
-                    position: this.position || "N/A",
-                    preferredArea: this.preferredArea || "N/A",
-                    referral: this.referral || "N/A",
-                    referralBy: this.referralBy || "N/A",
-                    onlineAd: this.onlineAd || "N/A",
-                    walkIn: this.walkIn || "N/A",
-                    othersRef: this.othersRef || "N/A",
-                    fname: this.fname || "N/A",
-                    nickname: this.nickname || "N/A",
-                    birthdate: this.birthdate || "N/A",
-                    placeOfBirth: this.placeOfBirth || "N/A",
-                    gender: this.gender || "N/A",
-                    bloodType: this.bloodType || "N/A",
-                    homeAddress: this.homeAddress || "N/A",
-                    mobileNo: this.mobileNo || "N/A",
-                    landline: this.landline || "N/A",
-                    email: this.email || "N/A",
-                    citizenship: this.citizenship || "N/A",
-                    othersCitizenship: this.othersCitizenship || "N/A",
-                    naturalizationInfo: this.naturalizationInfo || "N/A",
-                    maritalStatus: this.maritalStatus || "N/A",
-                    maidenName: this.maidenName || "N/A",
-                    spouseName: this.spouseName || "N/A",
-                    sssNo: this.sssNo || "N/A",
-                    tin: this.tin || "N/A",
-                });
-            } catch (error) {
-                console.log(error);
-            }
+      async save() {
+        const requiredFields = [
+          "preferredArea",
+          "fname",
+          "birthdate",
+          "placeOfBirth",
+          "gender",
+          "bloodType",
+          "homeAddress",
+          "mobileNo",
+          "email",
+          "citizenship",
+          "maritalStatus",
+          "sssNo",
+          "tin"
+        ];
+
+        for (const field of requiredFields) {
+          if (!this[field]) {
+            alert(`Please fill in the ${field.replace(/([A-Z])/g, ' $1').trim()} field.`);
+            return;
+          }
         }
+
+        try {
+          const ins = await axios.post('save', {
+            position: this.position || "N/A",
+            preferredArea: this.preferredArea || "N/A",
+            referral: this.referral || "N/A",
+            referralBy: this.referralBy || "N/A",
+            onlineAd: this.onlineAd || "N/A",
+            walkIn: this.walkIn || "N/A",
+            othersRef: this.othersRef || "N/A",
+            fname: this.fname || "N/A",
+            nickname: this.nickname || "N/A",
+            birthdate: this.birthdate || "N/A",
+            placeOfBirth: this.placeOfBirth || "N/A",
+            gender: this.gender || "N/A",
+            bloodType: this.bloodType || "N/A",
+            homeAddress: this.homeAddress || "N/A",
+            mobileNo: this.mobileNo || "N/A",
+            landline: this.landline || "N/A",
+            email: this.email || "N/A",
+            citizenship: this.citizenship || "N/A",
+            othersCitizenship: this.othersCitizenship || "N/A",
+            naturalizationInfo: this.naturalizationInfo || "N/A",
+            maritalStatus: this.maritalStatus || "N/A",
+            maidenName: this.maidenName || "N/A",
+            spouseName: this.spouseName || "N/A",
+            sssNo: this.sssNo || "N/A",
+            tin: this.tin || "N/A",
+          });
+
+          // Reset the form after successful submission
+          this.resetForm();
+        } catch (error) {
+          console.log(error);
+        }
+      },
+
+      resetForm() {
+        for (const key in this.$data) {
+          if (this.$data.hasOwnProperty(key)) {
+            this.$data[key] = "";
+          }
+        }
+      }
     }
-}
+  }
 </script>
-
-
