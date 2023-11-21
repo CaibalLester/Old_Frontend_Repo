@@ -3,7 +3,7 @@
   <div class="body-wrapper">
     <!-- partial:partials/_sidebar.html -->
     <aside class="mdc-drawer mdc-drawer--dismissible mdc-drawer--open">
-      <div class="mdc-drawer__header">
+      <div class="mdc-drawer__headers">
         <a href="index.html" class="brand-logo">
         
           

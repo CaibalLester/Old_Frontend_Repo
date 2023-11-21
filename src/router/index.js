@@ -14,6 +14,8 @@ import FormB from '../views/ApplicantPage/FormB.vue'
 import FormC from '../views/ApplicantPage/FormC.vue'
 import FormD from '../views/ApplicantPage/FormD.vue'
 import FormE from '../views/ApplicantPage/FormE.vue'
+import Dashboard from '../views/Admin/Dashboard.vue'
+
 const routes = [
   {
     path: '/',
@@ -78,6 +80,10 @@ const routes = [
   {
     path: '/formE',
     component: FormE
+  },
+  {
+    path: '/dashboard',
+    component: Dashboard
   },
 ]
 
