@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '../views/HomePage/HomePage.vue'
 import HomeApplicant from '../views/ApplicantPage/HomeApplicant.vue'
 import HomeAgent from '../views/AgentPage/HomeAgent.vue'
+import HomeAdmin from '../views/Admin/HomeAdmin.vue'
 import PortfolioApplicant from '../views/ApplicantPage/PortfolioApplicant.vue'
 import PortfolioAgent from '../views/AgentPage/PortfolioAgent.vue'
 import AboutPage from '../views/HomePage/AboutPage.vue'
@@ -14,7 +15,7 @@ import FormB from '../views/ApplicantPage/FormB.vue'
 import FormC from '../views/ApplicantPage/FormC.vue'
 import FormD from '../views/ApplicantPage/FormD.vue'
 import FormE from '../views/ApplicantPage/FormE.vue'
-import Dashboard from '../views/Admin/Dashboard.vue'
+import Dash from '../views/Admin/Dash.vue'
 
 const routes = [
   {
@@ -28,6 +29,10 @@ const routes = [
     component: HomeApplicant,
     meta: { requiresAuth: true }
 
+  },
+  {
+    path: '/Admin',
+    component: HomeAdmin
   },
   {
     path: '/Agent',
@@ -82,8 +87,8 @@ const routes = [
     component: FormE
   },
   {
-    path: '/dashboard',
-    component: Dashboard
+    path: '/Dash',
+    component: Dash
   },
 ]
 

@@ -16,7 +16,6 @@
               <li><a href="/Agent" class="active">Home</a></li>
               <li><a href="/AboutAgent">About</a></li>
               <li><a href="/PortfolioAgent" >Portfolio</a></li>
-              <li><a href="#" >Commission</a></li>
               <li><a href="/">Logout</a></li>
             </ul>
           </nav><!-- .navbar -->
@@ -30,7 +29,7 @@
         <div class="container">
           <div class="row">
             <div class="col-xl-4">
-              <h2 data-aos="fade-up">Welcome Agent!</h2>
+              <h2 data-aos="fade-up">Welcome Admin!</h2>
               <blockquote data-aos="fade-up" data-aos-delay="100">
                 <a>Success in securing the job isn't solely dependent on your capacity to merely adapt. It hinges on your ability to adapt more swiftly than other applicants, aligning with the evolving needs and expectations of employers and the dynamic nature of the job market.</a>
               </blockquote>

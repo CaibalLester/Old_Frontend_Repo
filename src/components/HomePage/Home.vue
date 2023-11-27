@@ -36,7 +36,7 @@
           <div class="col-xl-4">
             <h2 data-aos="fade-up">ALLIANZ PNB</h2>
             <blockquote data-aos="fade-up" data-aos-delay="100">
-              <p>Hiring the right people takes time, the right questions, and a healthy dose of curiosity.</p>
+              <a>Hiring the right people takes time, the right questions, and a healthy dose of curiosity.</a>
             </blockquote>
             <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
               <a href="#about" class="btn-get-started">Get Started</a>

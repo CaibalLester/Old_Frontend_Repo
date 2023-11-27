@@ -1,13 +1,13 @@
 <template>
-    <ApplicantPage />
+    <AdminPage />
   </template>
   <script>
-  import ApplicantPage from '@/components/ApplicantPage/FormB.vue';
+  import AdminPage from '@/components/AdminPage/HomeAdmin.vue';
   
   export default {
     name: 'page',
     components: {
-      ApplicantPage
+      AdminPage
     },
     mounted() {
       this.loadScripts();
