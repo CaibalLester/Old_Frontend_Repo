@@ -27,7 +27,7 @@ const routes = [
     path: '/Applicant',
     name: 'page',
     component: HomeApplicant,
-    meta: { requiresAuth: true }
+    meta: { requiresAuth: true, allowedRoles: ['applicant'] }
 
   },
   {
@@ -36,15 +36,19 @@ const routes = [
   },
   {
     path: '/Agent',
-    component: HomeAgent
+    component: HomeAgent,
+    meta: { requiresAuth: true, allowedRoles: ['agent'] }
   },
   {
     path: '/PortfolioApplicant',
-    component: PortfolioApplicant
+    component: PortfolioApplicant,
+    meta: { requiresAuth: true, allowedRoles: ['applicant'] }
+   
   },
   {
     path: '/PortfolioAgent',
-    component: PortfolioAgent
+    component: PortfolioAgent,
+    meta: { requiresAuth: true, allowedRoles: ['agent'] }
   },
   {
     path: '/AboutPage',
@@ -52,11 +56,14 @@ const routes = [
   },
   {
     path: '/AboutApplicant',
-    component: AboutApplicant
+    component: AboutApplicant,
+    meta: { requiresAuth: true, allowedRoles: ['applicant'] }
+   
   },
   {
     path: '/AboutAgent',
-    component: AboutAgent
+    component: AboutAgent,
+    meta: { requiresAuth: true, allowedRoles: ['agent'] }
   },
   {
     path: '/LogIn',
@@ -68,27 +75,38 @@ const routes = [
   },
   {
     path: '/formA',
-    component: FormA
+    component: FormA,
+    meta: { requiresAuth: true, allowedRoles: ['applicant'] }
+   
   },
   {
     path: '/formB',
-    component: FormB
+    component: FormB,
+    meta: { requiresAuth: true, allowedRoles: ['applicant'] }
+   
   },
   {
     path: '/formC',
-    component: FormC
+    component: FormC,
+    meta: { requiresAuth: true, allowedRoles: ['applicant'] }
+   
   },
   {
     path: '/formD',
-    component: FormD
+    component: FormD,
+    meta: { requiresAuth: true, allowedRoles: ['applicant'] }
+   
   },
   {
     path: '/formE',
-    component: FormE
+    component: FormE,
+    meta: { requiresAuth: true, allowedRoles: ['applicant'] }
+   
   },
   {
     path: '/Dash',
-    component: Dash
+    component: Dash,
+    meta: { requiresAuth: true, allowedRoles: ['admin'] }
   },
 ]
 
@@ -97,20 +115,85 @@ const router = createRouter({
   routes
 })
 
+// router.beforeEach((to, from, next) => {
+//   const pasok = checkUserLogin();
+//   if (to.matched.some((record) => record.meta.requiresAuth)) {
+//     if (!pasok) {
+//       next("/login")
+//     } else {
+//       next();
+//     }
+//   } else {
+//     next();
+//   }
+// });
+// function checkUserLogin() {
+//   const userToken = sessionStorage.getItem("jwt");
+//   return !!userToken;
+// }
+
 router.beforeEach((to, from, next) => {
-  const pasok = checkUserLogin();
+  const userToken = sessionStorage.getItem("jwt");
+
   if (to.matched.some((record) => record.meta.requiresAuth)) {
-    if (!pasok) {
-      next("/login")
+    if (!userToken) {
+      // User is not logged in, redirect to login page
+      next("/login");
     } else {
-      next();
+      // User is logged in, check their role
+      const userRole = getUserRole(); // You need to implement this function
+      console.log("User role:", userRole);
+
+      if (!userRole) {
+        console.error("User role is null or undefined. Check how it's being set.");
+      }
+
+      const allowedRoles = to.meta.allowedRoles; // Add this meta field to your routes
+      console.log("Allowed roles:", allowedRoles);
+
+      if (allowedRoles && allowedRoles.includes(userRole)) {
+        // User has the required role, proceed to the requested route
+        next();
+      } else {
+        // User doesn't have the required role, redirect to appropriate page
+        redirectToAppropriatePage(userRole, next);
+      }
     }
   } else {
+    // The route doesn't require authentication, proceed
     next();
   }
 });
+
+
+
 function checkUserLogin() {
   const userToken = sessionStorage.getItem("jwt");
   return !!userToken;
 }
+
+function getUserRole() {
+  return sessionStorage.getItem("userRole");
+}
+
+function redirectToAppropriatePage(userRole, next) {
+  // Redirect the user to the appropriate page based on their role
+  switch (userRole) {
+    case "applicant":
+      next("/Applicant");
+      break;
+    case "admin":
+      next("/Admin");
+      break;
+    case "agent":
+      next("/Agent");
+      break;
+    default:
+      // Redirect to a default page for unknown roles
+      next("/login");
+      break;
+  }
+}
+
+
 export default router

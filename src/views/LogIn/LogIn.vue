@@ -23,6 +23,12 @@
                                     <label class="label" for="name">Email</label>
                                     <input type="text" v-model="email" class="form-control" placeholder="Email" required>
                                 </div>
+                                <label for="role">Role:</label>
+    <select v-model="role">
+      <option value="admin">Admin</option>
+      <option value="applicant">Applicant</option>
+      <option value="agent">Agent</option>
+    </select>
                                 <div class="form-group mb-3">
                                     <label class="label" for="password">Password</label>
                                     <input type="password" v-model="password" class="form-control" placeholder="Password"
@@ -71,7 +77,7 @@ export default {
 };
 </script> -->
 
-<script>
+<!-- <script>
 
 import router from '@/router';
 import axios from 'axios';
@@ -98,4 +104,56 @@ export default {
     }
 }
 
-</script> 
+</script>  -->
+
+<script>
+import router from '@/router';
+import axios from 'axios';
+
+export default {
+  data() {
+    return {
+      email: '',
+      password: '',
+      role: '', // Add role field
+      message: [],
+    };
+  },
+  methods: {
+    async login() {
+      const data = await axios.post("login", {
+        email: this.email,
+        password: this.password,
+        role: this.role, // Include the role in the request
+      });
+
+      this.message = data.data.msg;
+
+      if (data.data.msg === 'okay') {
+        sessionStorage.setItem("jwt", data.data.token);
+
+        // Set the user role in sessionStorage
+        sessionStorage.setItem("userRole", this.role);
+
+        // Redirect based on the role
+        switch (this.role) {
+          case 'admin':
+            router.push('/Admin');
+            break;
+          case 'applicant':
+            router.push('/Applicant');
+            break;
+          case 'agent':
+            router.push('/Agent');
+            break;
+          default:
+            // Handle other roles or redirect to a default route
+            router.push('/login');
+            break;
+        }
+      }
+    }
+  }
+}
+</script>
+

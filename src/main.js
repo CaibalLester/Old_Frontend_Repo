@@ -4,7 +4,8 @@ import './registerServiceWorker'
 import router from './router'
 
 import axios from 'axios'
-axios.defaults.baseURL="http://backend.test/";
+// axios.defaults.baseURL="http://backend.test/";
+axios.defaults.baseURL="http://localhost:8080/";
 
 // import'./assets/HomePage/vendor/bootstrap/js/bootstrap.bundle.min.js'
 // import'./assets/HomePage/vendor/aos/aos.js'

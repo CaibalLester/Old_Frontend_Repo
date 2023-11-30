@@ -18,9 +18,9 @@
       </header>
       <!-- End Header -->
     
-<section id="myform" class="myform d-flex align-items-center">   
-<div class="card">
-  <div class="custom-container">
+<section id="myform" class="myform d-flex align-items-center">
+    <div class="card">
+      <div class="custom-container">
         <form @submit.prevent="save">
             <fieldset>
                 <h1>LIFE CHANGER FORM</h1>
@@ -146,9 +146,141 @@
 
                     <label for="tin">Tax Identification No.:</label>
                     <input type="text" v-model="tin" name="tin" class="form-control">
+                    <label for="lifeInsuranceExperience">Life Insurance Experience:</label>
+                  <input type="checkbox" id="yesLife" v-modellifeInsuranceExperience name="lifeInsuranceExperience" value="Yes">
+                  <label for="yesLife">Yes</label><br><br>
+
+                  <input type="checkbox" id="noLife" v-model="lifeInsuranceExperience" name="lifeInsuranceExperience" value="No">
+                  <label for="noLife">No</label><br><br>
+
+                  <label for="insuranceType">If yes, check the type:</label><br>
+                  <input type="checkbox" id="traditional" v-model="traditional" name="traditional" value="Traditional">
+                  <label for="traditional">Traditional</label>
+
+                  <input type="checkbox" id="variable" v-model="variable" name="variable" value="Variable">
+                  <label for="variable">Variable</label><br><br>
+
+                  <label for="recentInsuranceCompany">Most recent Life Insurance Company:</label>
+                  <input type="text" id="recentInsuranceCompany" v-model="recentInsuranceCompany" name="recentInsuranceCompany" class="form-control"><br>
                 </div>
+
+                <h2>Educational Background</h2>
+                <div class="table-responsive">
+                <table class="table table-bordered">
+                  <tr>
+                    <th></th>
+                    <th class="text-center">SCHOOL</th>
+                    <th class="text-center">COURSE</th>
+                    <th class="text-center">YEAR GRADUATED</th>
+                  </tr>
+                  <tr>
+                    <td>High School</td>
+                    <td><input type="text" v-model="highSchool" name="highSchool" class="form-control text-center"></td>
+                    <td><input type="text" v-model="highSchoolCourse" name="highSchoolCourse" class="form-control text-center"></td>
+                    <td><input type="date" v-model="highSchoolYear" name="highSchoolYear" class="form-control text-center"></td>
+                  </tr>
+                  <tr>
+                    <td>College</td>
+                    <td><input type="text" v-model="college" name="college" class="form-control text-center"></td>
+                    <td><input type="text" v-model="collegeCourse" name="collegeCourse" class="form-control text-center"></td>
+                    <td><input type="date" v-model="collegeYear" name="collegeYear" class="form-control text-center"></td>
+                  </tr>
+                  <tr>
+                    <td>Graduate School</td>
+                    <td><input type="text" v-model="graduateSchool" name="graduateSchool" class="form-control text-center"></td>
+                    <td><input type="text" v-model="graduateCourse" name="graduateCourse" class="form-control text-center"></td>
+                    <td><input type="date" v-model="graduateYear" name="graduateYear" class="form-control text-center"></td>
+                  </tr>
+                </table>
+                </div>
+
+                <h2>Employment History</h2>
+                <div class="table-responsive">
+                <table class="table table-bordered">
+                  <tr>
+                    <th class="text-center">NAME AND ADDRESS OF EMPLOYER</th>
+                    <th class="text-center">POSITION</th>
+                    <th class="text-center" colspan="2">EMPLOYMENT DATE</th>
+                    <th class="text-center">REASON FOR LEAVING</th>
+                  </tr>
+                  <tr>
+                    <td><input type="text" v-model="companyName1" name="companyName1" class="form-control text-center"></td>
+                    <td><input type="text" v-model="position1" name="position1" class="form-control text-center"></td>
+                    <td><input type="date" v-model="employmentFrom1" name="employmentFrom1" class="form-control text-center"></td>
+                    <td><input type="date" v-model="employmentTo1" name="employmentTo1" class="form-control text-center" ></td>
+                    <td><input type="text" v-model="reason1" name="reason1" class="form-control text-center"></td>
+                  </tr>
+                  <tr>
+                    <td><input type="text" v-model="companyName2" name="companyName2" class="form-control text-center"></td>
+                    <td><input type="text" v-model="position2" name="position2" class="form-control text-center"></td>
+                    <td><input type="date" v-model="employmentFrom2" name="employmentFrom2" class="form-control text-center"></td>
+                    <td><input type="date" v-model="employmentTo2" name="employmentTo2" class="form-control text-center" ></td>
+                    <td><input type="text" v-model="reason2" name="reason2" class="form-control text-center"></td>
+                  </tr>
+                  <tr>
+                    <td><input type="text" v-model="companyName3" name="companyName3" class="form-control text-center"></td>
+                    <td><input type="text" v-model="position3" name="position3" class="form-control text-center"></td>
+                    <td><input type="date" v-model="employmentFrom3" name="employmentFrom3" class="form-control text-center"></td>
+                    <td><input type="date" v-model="employmentTo3" name="employmentTo3" class="form-control text-center" ></td>
+                    <td><input type="text" v-model="reason3" name="reason3" class="form-control text-center"></td>
+                  </tr>
+                </table>
+                </div>
+
+
+                <h2>Most recent employer's contact details</h2>
+                <table class="table" border="1">
+                  <tr>
+                    <td>Company Name:<input type="text" v-model="companyName" name="companyName" class="form-control"></td>
+                    <td>Position:<input type="text" v-model="resposition" name="resposition" class="form-control"></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" style="text-align: center;">Employer's contact details:</td>
+                  </tr>
+                  <tr>
+                    <td><input type="text" v-model="contactName" name="contactName" class="form-control" placeholder="Contact Name:"></td>
+                    <td><input type="text" v-modelcontactPosition name="contactPosition" class="form-control" placeholder="Position:"></td>
+                  </tr>
+                  <tr>
+                    <td><input type="text" v-model="emailAddress" name="emailAddress" class="form-control" placeholder="Email Address:"></td>
+                    <td><input type="text" v-model="contactNumber" name="contactNumber" class="form-control" placeholder="Contact Number:"></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">If currently employed, have you already tendered your resignation?
+                      <div class="form-check form-check-inline">
+                        <label class="form-check-label" for="yesCheckbox">Yes</label>
+                        <input type="checkbox" v-model="yescuremployed" name="yescuremployed" class="form-check-input" value="Yes">
+
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <label class="form-check-label" for="noCheckbox">No</label>
+                        <input type="checkbox" v-model="nocuremployed" name="nocuremployed" class="form-check-input" value="No">
+
+                      </div>
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <td colspan="2">1. If answer is No, are we allowed to conduct the employment verification?
+                      <div class="form-check form-check-inline">
+                        <label class="form-check-label" for="yesCheckbox">Yes</label>
+                        <input type="checkbox" v-model="allowed" name="allowed" class="form-check-input" value="Yes">
+
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <label class="form-check-label" for="noCheckbox">No</label>
+                        <input type="checkbox" v-model="notallowed" name="notallowed" class="form-check-input" value="No">
+
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2"><input type="text" v-model="ifnoProvdtls" name="ifnoProvdtls" class="form-control"
+                        placeholder="2. If answer in number 1 is no, please provide details "></td>
+                  </tr>
+                </table>
                 <input type="submit" value="Submit" class="btn btn-primary">
-            </fieldset>
+              </fieldset>
         </form>
     </div>
 </div>
@@ -189,7 +321,48 @@
         maidenName: "",
         spouseName: "",
         sssNo: "",
-        tin: ""
+        tin: "",
+
+        lifeInsuranceExperience: "",
+        traditional: "",
+        variable: "",
+        recentInsuranceCompany: "",
+        highSchool: "",
+        highSchoolCourse: "",
+        highSchoolYear: "",
+        college: "",
+        collegeCourse: "",
+        collegeYear: "",
+        graduateSchool: "",
+        graduateCourse: "",
+        graduateYear: "",
+        companyName1: "",
+        position1: "",
+        employmentFrom1: "",
+        employmentTo1: "",
+        reason1: "",
+        companyName2: "",
+        position2: "",
+        employmentFrom2: "",
+        employmentTo2: "",
+        reason2: "",
+        companyName3: "",
+        position3: "",
+        employmentFrom3: "",
+        employmentTo3: "",
+        reason3: "",
+        companyName: "",
+        resposition: "",
+        contactName: "",
+        contactPosition: "",
+        emailAddress: "",
+        contactNumber: "",
+        yescuremployed: "",
+        nocuremployed: "",
+        allowed: "",
+        notallowed: "",
+        ifnoProvdtls: "",
+        
       };
     },
 
@@ -249,6 +422,46 @@
             spouseName: this.spouseName || "N/A",
             sssNo: this.sssNo || "N/A",
             tin: this.tin || "N/A",
+
+            lifeInsuranceExperience: this.lifeInsuranceExperience || "N/A",
+traditional: this.traditional || "N/A",
+variable: this.variable || "N/A",
+recentInsuranceCompany: this.recentInsuranceCompany || "N/A",
+highSchool: this.highSchool || "N/A",
+highSchoolCourse: this.highSchoolCourse || "N/A",
+highSchoolYear: this.highSchoolYear || "N/A",
+college: this.college || "N/A",
+collegeCourse: this.collegeCourse || "N/A",
+collegeYear: this.collegeYear || "N/A",
+graduateSchool: this.graduateSchool || "N/A",
+graduateCourse: this.graduateCourse || "N/A",
+graduateYear: this.graduateYear || "N/A",
+companyName1: this.companyName1 || "N/A",
+position1: this.position1 || "N/A",
+employmentFrom1: this.employmentFrom1 || "N/A",
+employmentTo1: this.employmentTo1 || "N/A",
+reason1: this.reason1 || "N/A",
+companyName2: this.companyName2 || "N/A",
+position2: this.position2 || "N/A",
+employmentFrom2: this.employmentFrom2 || "N/A",
+employmentTo2: this.employmentTo2 || "N/A",
+reason2: this.reason2 || "N/A",
+companyName3: this.companyName3 || "N/A",
+position3: this.position3 || "N/A",
+employmentFrom3: this.employmentFrom3 || "N/A",
+employmentTo3: this.employmentTo3 || "N/A",
+reason3: this.reason3 || "N/A",
+companyName: this.companyName || "N/A",
+resposition: this.resposition || "N/A",
+contactName: this.contactName || "N/A",
+contactPosition: this.contactPosition || "N/A",
+emailAddress: this.emailAddress || "N/A",
+contactNumber: this.contactNumber || "N/A",
+yescuremployed: this.yescuremployed || "N/A",
+nocuremployed: this.nocuremployed || "N/A",
+allowed: this.allowed || "N/A",
+notallowed: this.notallowed || "N/A",
+ifnoProvdtls: this.ifnoProvdtls || "N/A",
           });
 
           // Reset the form after successful submission
