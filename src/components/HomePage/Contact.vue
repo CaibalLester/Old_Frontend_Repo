@@ -34,43 +34,60 @@
   <div class="breadcrumbs d-flex align-items-center">
     <div class="container position-relative d-flex flex-column align-items-center">
 
-      <h2>About</h2>
+      <h2>Contact</h2>
       <ol>
         <li><a href="/">Home</a></li>
-        <li>About</li>
+        <li>Contact</li>
       </ol>
 
     </div>
   </div><!-- End Breadcrumbs -->
 
-  <!-- ======= About Section ======= -->
-  <section id="about" class="about">
+         <!-- ======= About Section ======= -->
+<section id="about" class="about">
     <div class="container" data-aos="fade-up">
+        <div class="row gy-2" data-aos="fade-up">
 
-      <div class="row gy-2" data-aos="fade-up">
-        <div class="col-lg-2">
-          
-        </div>
-        <div class="col-lg-8">
-          <div class="content ps-lg-5">
-            <h3>Why should someone consider getting insurance and making investments with Allianz PNB?</h3>
-            <p>
-              Delving into the realms of insurance and investment, Allianz PNB Life Insurance Corporation presents a compelling narrative of safeguarding against the unpredictable while fostering avenues for wealth accumulation. 
-            </p>
-            <ul>
-              <li><i class="bi bi-check-circle-fill"></i> Insurance provides financial protection in case of unexpected events, offering peace of mind.</li>
-              <li><i class="bi bi-check-circle-fill"></i> Investments with Allianz PNB can help grow wealth over time through various financial instruments.</li>
-              <li><i class="bi bi-check-circle-fill"></i> Allianz PNB's products cater to diverse needs, from life insurance to investment opportunities.</li>
-              <li><i class="bi bi-check-circle-fill"></i> Having both insurance and investments with Allianz PNB offers a comprehensive financial strategy.</li>
-              <li><i class="bi bi-check-circle-fill"></i> It's a reliable way to plan for the future, ensuring financial stability for you and your family.</li>
-              <li><i class="bi bi-check-circle-fill"></i> Allianz PNB's expertise in both insurance and investment markets enhances overall financial planning.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+            <!-- Card 1 -->
+            <div class="col-lg-4">
+                <div class="content">
+                    <div class="itcard">
+                        <div class="itcontainer">
+                            <h4><b>John Doe</b></h4>
+                            <p>Architect & Engineer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Card 2 --> <br>
+            <div class="col-lg-4">
+                <div class="content">
+                    <div class="itcard">
+                        <div class="itcontainer">
+                            <h4><b>John Doe</b></h4>
+                            <p>Architect & Engineer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 --> <br>
+            <div class="col-lg-4">
+                <div class="content">
+                    <div class="itcard">
+                        <div class="itcontainer">
+                            <h4><b>John Doe</b></h4>
+                            <p>Architect & Engineer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
-  </section><!-- End About Section -->
+</section><!-- End About Section -->
+
 </main><!-- End #main -->
 
 <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

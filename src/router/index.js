@@ -1,21 +1,31 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '../views/HomePage/HomePage.vue'
-import HomeApplicant from '../views/ApplicantPage/HomeApplicant.vue'
-import HomeAgent from '../views/AgentPage/HomeAgent.vue'
-import HomeAdmin from '../views/Admin/HomeAdmin.vue'
-import PortfolioApplicant from '../views/ApplicantPage/PortfolioApplicant.vue'
-import PortfolioAgent from '../views/AgentPage/PortfolioAgent.vue'
 import AboutPage from '../views/HomePage/AboutPage.vue'
-import AboutApplicant from '../views/ApplicantPage/AboutPage.vue'
-import AboutAgent from '../views/AgentPage/AboutPage.vue'
+import ContactPage from '../views/HomePage/ContactPage.vue'
+import TeamPage from '../views/HomePage/TeamPage.vue'
 import LogIn from '../views/LogIn/LogIn.vue'
 import Register from '../views/LogIn/Register.vue'
+import ChangeRegister from '../views/LogIn/ChangeRegister.vue'
+
+
+import HomeApplicant from '../views/ApplicantPage/HomeApplicant.vue'
+import PortfolioApplicant from '../views/ApplicantPage/PortfolioApplicant.vue'
+import AboutApplicant from '../views/ApplicantPage/AboutPage.vue'
 import FormA from '../views/ApplicantPage/FormA.vue'
 import FormB from '../views/ApplicantPage/FormB.vue'
 import FormC from '../views/ApplicantPage/FormC.vue'
 import FormD from '../views/ApplicantPage/FormD.vue'
 import FormE from '../views/ApplicantPage/FormE.vue'
+
+
+import HomeAgent from '../views/AgentPage/HomeAgent.vue'
+import PortfolioAgent from '../views/AgentPage/PortfolioAgent.vue'
+import AboutAgent from '../views/AgentPage/AboutPage.vue'
+
+
+import HomeAdmin from '../views/Admin/HomeAdmin.vue'
 import Dash from '../views/Admin/Dash.vue'
+
 
 const routes = [
   {
@@ -27,7 +37,7 @@ const routes = [
     path: '/Applicant',
     name: 'page',
     component: HomeApplicant,
-    meta: { requiresAuth: true, allowedRoles: ['applicant'] }
+    //meta: { requiresAuth: true, allowedRoles: ['applicant'] }
 
   },
   {
@@ -37,33 +47,41 @@ const routes = [
   {
     path: '/Agent',
     component: HomeAgent,
-    meta: { requiresAuth: true, allowedRoles: ['agent'] }
+    //meta: { requiresAuth: true, allowedRoles: ['agent'] }
   },
   {
     path: '/PortfolioApplicant',
     component: PortfolioApplicant,
-    meta: { requiresAuth: true, allowedRoles: ['applicant'] }
+    //meta: { requiresAuth: true, allowedRoles: ['applicant'] }
    
   },
   {
     path: '/PortfolioAgent',
     component: PortfolioAgent,
-    meta: { requiresAuth: true, allowedRoles: ['agent'] }
+    //meta: { requiresAuth: true, allowedRoles: ['agent'] }
   },
   {
     path: '/AboutPage',
     component: AboutPage
   },
   {
+    path: '/ContactPage',
+    component: ContactPage
+  },
+  {
+    path: '/TeamPage',
+    component: TeamPage
+  },
+  {
     path: '/AboutApplicant',
     component: AboutApplicant,
-    meta: { requiresAuth: true, allowedRoles: ['applicant'] }
+    //meta: { requiresAuth: true, allowedRoles: ['applicant'] }
    
   },
   {
     path: '/AboutAgent',
     component: AboutAgent,
-    meta: { requiresAuth: true, allowedRoles: ['agent'] }
+    //meta: { requiresAuth: true, allowedRoles: ['agent'] }
   },
   {
     path: '/LogIn',
@@ -74,39 +92,43 @@ const routes = [
     component: Register
   },
   {
+    path: '/ChangeRegister',
+    component: ChangeRegister
+  },
+  {
     path: '/formA',
     component: FormA,
-    meta: { requiresAuth: true, allowedRoles: ['applicant'] }
+    //meta: { requiresAuth: true, allowedRoles: ['applicant'] }
    
   },
   {
     path: '/formB',
     component: FormB,
-    meta: { requiresAuth: true, allowedRoles: ['applicant'] }
+    //meta: { requiresAuth: true, allowedRoles: ['applicant'] }
    
   },
   {
     path: '/formC',
     component: FormC,
-    meta: { requiresAuth: true, allowedRoles: ['applicant'] }
+    //meta: { requiresAuth: true, allowedRoles: ['applicant'] }
    
   },
   {
     path: '/formD',
     component: FormD,
-    meta: { requiresAuth: true, allowedRoles: ['applicant'] }
+    //meta: { requiresAuth: true, allowedRoles: ['applicant'] }
    
   },
   {
     path: '/formE',
     component: FormE,
-    meta: { requiresAuth: true, allowedRoles: ['applicant'] }
+    //meta: { requiresAuth: true, allowedRoles: ['applicant'] }
    
   },
   {
     path: '/Dash',
     component: Dash,
-    meta: { requiresAuth: true, allowedRoles: ['admin'] }
+    //meta: { requiresAuth: true, allowedRoles: ['admin'] }
   },
 ]
 

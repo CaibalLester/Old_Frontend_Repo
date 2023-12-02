@@ -566,7 +566,7 @@ section {
 .hero:before {
   position: absolute;
   content: "";
-  background: rgba(27, 47, 69, 0.6);
+  background: rgba(27, 47, 69, 0.851);
   inset: 0;
 }
 
@@ -925,7 +925,7 @@ section {
 .myadmin:before {
   position: absolute;
   content: "";
-  background: rgba(27, 47, 69, 0.6);
+  background: rgba(27, 47, 69, 0.842);
   inset: 0;
 }
 
@@ -1017,6 +1017,26 @@ section {
 }
 
 
+/*--------------------------------------------------------------
+# photo card
+--------------------------------------------------------------*/
+
+.itcard {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 80%;
+  border-radius: 10%;
+  text-align: center;
+  align-items: center;
+}
+
+.itcard:hover {
+  box-shadow: 0 8px 50px 0 rgba(0,0,0,0.2);
+}
+
+.itcontainer {
+  padding: 2px 16px;
+}
 
 /*--------------------------------------------------------------
 # myport Section
@@ -1125,6 +1145,9 @@ section {
     font-size: 13px;
   }
 }
+
+
+
 
 .myport .card {
   width: 100%;
@@ -1324,7 +1347,7 @@ section {
 .loginhero {
   width: 100%;
   min-height: 100vh;
-  background: url("../img/images4.jpg") top center;
+  background: url("../img/vector1.jpg") top center;
   background-size: cover;
   position: relative;
   padding: 120px 0;
@@ -1334,7 +1357,7 @@ section {
 .loginhero:before {
   position: absolute;
   content: "";
-  background: rgba(27, 47, 69, 0.6);
+  background: rgba(27, 47, 69, 0.785);
   inset: 0;
 }
 

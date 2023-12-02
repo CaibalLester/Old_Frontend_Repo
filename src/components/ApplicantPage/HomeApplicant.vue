@@ -39,14 +39,14 @@
       </header>
       <!-- End Header -->
   
-      <!-- ======= myhero Section ======= -->
-      <section id="myhero" class="myhero d-flex align-items-center">
+      <!-- ======= myadmin Section ======= -->
+      <section id="myadmin" class="myadmin d-flex align-items-center">
         <div class="container">
           <div class="row">
             <div class="col-xl-4">
               <h2 data-aos="fade-up">Welcome Applicant!</h2>
               <blockquote data-aos="fade-up" data-aos-delay="100">
-                <p>Your success in life isn't based on your ability to simply change. It is based on your ability to change faster than your competition, customers, and business.</p>
+                <a>Your success in life isn't based on your ability to simply change. It is based on your ability to change faster than your competition, customers, and business.</a>
               </blockquote>
               <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
                 <a href="/PortfolioApplicant" class="btn-get-started">Get Started</a>
@@ -54,7 +54,7 @@
             </div>
           </div>
         </div>
-      </section><!-- End myhero Section -->
+      </section><!-- End myadmin Section -->
   
   
   

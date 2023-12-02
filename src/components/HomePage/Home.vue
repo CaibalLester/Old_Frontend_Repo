@@ -13,8 +13,8 @@
             <li> <a  class="logo d-flex align-items-center" href="/"> <h1 class="d-flex align-items-right">ALLIANZ</h1></a></li>
             <li><a href="/" class="active">Home</a></li>
             <li><a href="/AboutPage">About</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="/TeamPage">Team</a></li>
+            <li><a href="/ContactPage">Contact</a></li>
             <li class="dropdown"><a href="#"><span>Info</span> <i
                   class="bi bi-chevron-down dropdown-indicator"></i></a>
               <ul>
@@ -39,7 +39,7 @@
               <a>Hiring the right people takes time, the right questions, and a healthy dose of curiosity.</a>
             </blockquote>
             <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
-              <a href="#about" class="btn-get-started">Get Started</a>
+              <a href="/LogIn" class="btn-get-started">Get Started</a>
             </div>
 
           </div>
