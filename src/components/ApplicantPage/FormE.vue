@@ -1,28 +1,56 @@
 <template>
     
-    <!-- ======= Header ======= -->
-    <header id="header" class="header d-flex align-items-center fixed-top">
+
+   <!-- ======= Header ======= -->
+   <header id="header" class="header d-flex align-items-center fixed-top">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <table>
-                <tr>
-                    <td><a class="btn btn-success" href="/Applicant">---Back----</a></td>
-                </tr>
-                <tr>
-                    <td><a class="btn btn-danger" href="/">--Logout--</a></td>
-                </tr>
-            </table>
-          </a>
+
+          <a  class="logo d-flex align-items-center"></a>
+  
+          <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+          <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+  
+          <nav id="navbar" class="navbar">
+            <ul>
+              <li> <a  class="logo d-flex align-items-center" href="/Applicant"> <h1 class="d-flex align-items-right">ALLIANZ</h1></a></li>
+              <li><a href="/Applicant" class="active">Home</a></li>
+              <li class="dropdown"><a href="#"><span>Company Forms</span> <i
+                    class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li class="dropdown"><a href="#"><span>Forms</span> <i
+                        class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                      <li><a href="/FormA">Form A</a></li>
+                      <li><a href="/FormB">Form B</a></li>
+                      <li><a href="/FormC">Form C</a></li>
+                      <li><a href="/FormD">Form D</a></li>
+                      <li><a href="/FormE">Form E</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="/Applicant">Logout</a></li>
+            </ul>
+          </nav><!-- .navbar -->
+  
         </div>
       </header>
       <!-- End Header -->
+
+      <main id="main">
+  <!-- ======= Breadcrumbs ======= -->
+  <div class="breadcrumbs d-flex align-items-center">
+    <div class="container position-relative d-flex flex-column align-items-center">
+        <h2>Statement of Undertaking Submission of Hard Copies of Application Forms</h2>
+    </div>
+  </div><!-- End Breadcrumbs -->
 
 <section id="myform" class="myform d-flex align-items-center">  
 <div class="card">
     <div class="custom-container">
         <form @submit.prevent="save">
             <fieldset>
-                <h1>Statement of Undertaking Submission of Hard Copies of Application Forms</h1>
+                
                 <div class="form-group">
                     <label for="position">Position applying for:</label>
                     <input type="text" v-model="position" name="position" class="form-control" readonly>
@@ -127,7 +155,9 @@
     </div>
     </div>
     </section>
+      </main>
 </template>
+
 <style>
 @import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
 </style>

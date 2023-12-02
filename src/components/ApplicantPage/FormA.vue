@@ -1,29 +1,55 @@
 <template>
 
 
-    <!-- ======= Header ======= -->
-    <header id="header" class="header d-flex align-items-center fixed-top">
+   <!-- ======= Header ======= -->
+   <header id="header" class="header d-flex align-items-center fixed-top">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <table>
-                <tr>
-                    <td><a class="btn btn-success" href="/Applicant">---Back----</a></td>
-                </tr>
-                <tr>
-                    <td><a class="btn btn-danger" href="/">--Logout--</a></td>
-                </tr>
-            </table>
-          </a>
+
+          <a  class="logo d-flex align-items-center"></a>
+  
+          <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+          <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+  
+          <nav id="navbar" class="navbar">
+            <ul>
+              <li> <a  class="logo d-flex align-items-center" href="/Applicant"> <h1 class="d-flex align-items-right">ALLIANZ</h1></a></li>
+              <li><a href="/Applicant" class="active">Home</a></li>
+              <li class="dropdown"><a href="#"><span>Company Forms</span> <i
+                    class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li class="dropdown"><a href="#"><span>Forms</span> <i
+                        class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                      <li><a href="/FormA">Form A</a></li>
+                      <li><a href="/FormB">Form B</a></li>
+                      <li><a href="/FormC">Form C</a></li>
+                      <li><a href="/FormD">Form D</a></li>
+                      <li><a href="/FormE">Form E</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="/Applicant">Logout</a></li>
+            </ul>
+          </nav><!-- .navbar -->
+  
         </div>
       </header>
       <!-- End Header -->
+
+      <main id="main">
+  <!-- ======= Breadcrumbs ======= -->
+  <div class="breadcrumbs d-flex align-items-center">
+    <div class="container position-relative d-flex flex-column align-items-center">
+      <h2>LIFE CHANGER FORM</h2>
+    </div>
+  </div><!-- End Breadcrumbs -->
     
 <section id="myform" class="myform d-flex align-items-center">
     <div class="card">
       <div class="custom-container">
-        <form @submit.prevent="save">
+        <form @submit.prevent="save" >
             <fieldset>
-                <h1>LIFE CHANGER FORM</h1>
                 <div class="form-group">
                     <label for="position">Position applying for:</label>
                     <input type="text" v-model="position" name="position" placeholder="Agent" class="form-control" readonly>
@@ -33,13 +59,13 @@
                     <input type="text" v-model="preferredArea" name="preferredArea" class="form-control" required>
                 </div>
                 <div class="form-group">
-                    <label>Source:</label>
-
+                    
                     <div class="form-check form-check-inline">
                         <input type="checkbox" v-model="referral" name="source" value="Referral" class="form-check-input">
                         <label for="referral" class="form-check-label">Referral</label>
                     </div>
-                    <input type="text" v-model="referralBy" name="referralBy" class="form-control" placeholder="Referral By">
+                    <label>Source:</label>
+                    <input type="text" v-model="referralBy" name="referralBy" class="form-control" placeholder="Referral By"><br>
 
                     <div class="form-check form-check-inline">
                         <input type="radio" v-model="selectedSource" name="source" value="Online Advertisement" class="form-check-input">
@@ -147,11 +173,13 @@
                     <label for="tin">Tax Identification No.:</label>
                     <input type="text" v-model="tin" name="tin" class="form-control">
                     <label for="lifeInsuranceExperience">Life Insurance Experience:</label>
+                  
+                  <div>  
                   <input type="checkbox" id="yesLife" v-modellifeInsuranceExperience name="lifeInsuranceExperience" value="Yes">
-                  <label for="yesLife">Yes</label><br><br>
+                  <label for="yesLife">Yes</label>
 
                   <input type="checkbox" id="noLife" v-model="lifeInsuranceExperience" name="lifeInsuranceExperience" value="No">
-                  <label for="noLife">No</label><br><br>
+                  <label for="noLife">No</label></div><br><br>
 
                   <label for="insuranceType">If yes, check the type:</label><br>
                   <input type="checkbox" id="traditional" v-model="traditional" name="traditional" value="Traditional">
@@ -247,31 +275,29 @@
                   </tr>
                   <tr>
                     <td colspan="2">If currently employed, have you already tendered your resignation?
-                      <div class="form-check form-check-inline">
+                      <div><div class="form-check form-check-inline">
                         <label class="form-check-label" for="yesCheckbox">Yes</label>
                         <input type="checkbox" v-model="yescuremployed" name="yescuremployed" class="form-check-input" value="Yes">
-
                       </div>
                       <div class="form-check form-check-inline">
                         <label class="form-check-label" for="noCheckbox">No</label>
                         <input type="checkbox" v-model="nocuremployed" name="nocuremployed" class="form-check-input" value="No">
-
                       </div>
+                    </div>
                     </td>
 
                   </tr>
                   <tr>
                     <td colspan="2">1. If answer is No, are we allowed to conduct the employment verification?
-                      <div class="form-check form-check-inline">
+                      <div><div class="form-check form-check-inline">
                         <label class="form-check-label" for="yesCheckbox">Yes</label>
                         <input type="checkbox" v-model="allowed" name="allowed" class="form-check-input" value="Yes">
-
                       </div>
                       <div class="form-check form-check-inline">
                         <label class="form-check-label" for="noCheckbox">No</label>
                         <input type="checkbox" v-model="notallowed" name="notallowed" class="form-check-input" value="No">
-
                       </div>
+                    </div>
                     </td>
                   </tr>
                   <tr>
@@ -285,6 +311,7 @@
     </div>
 </div>
 </section>
+</main><!-- End #main -->
 </template>
 
 <style>

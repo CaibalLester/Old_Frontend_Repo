@@ -87,7 +87,7 @@ label {
   /* Centers the container horizontally */
   border-style: solid;
   border-width: 1px;
-  border-color: black;
+  border-color: rgba(17, 17, 17, 0.382);
   padding: 20px
 }
 
@@ -778,6 +778,147 @@ section {
 }
 
 
+/*--------------------------------------------------------------
+# myform Section
+--------------------------------------------------------------*/
+.myform {
+  width: 100%;
+  min-height: 100vh;
+  background: url("../img/images5.jpg") top center;
+  background-size: cover;
+  position: relative;
+  padding: 120px 0;
+  z-index: 3;
+}
+
+
+.myform:before {
+  position: absolute;
+  content: "";
+  background: rgba(27, 47, 69, 0.851);
+  inset: 0;
+}
+
+@media (max-width: 1034px) {
+  .myform:before {
+    background: rgba(27, 47, 69, 0.7);
+  }
+}
+
+.myform .container {
+  z-index: 1;
+}
+
+@media (min-width: 1365px) {
+  .myform {
+    background-attachment: fixed;
+  }
+}
+
+.myform h2 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+  font-family: var(--font-secondary);
+}
+
+.myform blockquote {
+  color: #fff;
+  padding-left: 20px;
+  font-size: 15px;
+  font-family: var(--font-default);
+  border-left: 2px solid var(--color-primary);
+  margin: 40px 0;
+}
+
+.myform .btn-get-started {
+  font-family: var(--font-secondary);
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: #fff;
+  background: var(--color-primary);
+}
+
+.myform .btn-get-started:hover {
+  background: rgba(86, 184, 230, 0.8);
+}
+
+.myform .btn-watch-video {
+  font-size: 16px;
+  transition: 0.5s;
+  margin-left: 25px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+}
+
+.myform .btn-watch-video i {
+  color: var(--color-primary);
+  font-size: 32px;
+  transition: 0.3s;
+  line-height: 0;
+  margin-right: 8px;
+}
+
+.myform .btn-watch-video:hover {
+  color: #fff;
+}
+
+.myform .btn-watch-video:hover i {
+  color: #82cbed;
+}
+
+@media (max-width: 640px) {
+  .myform h2 {
+    font-size: 36px;
+    line-height: 1;
+  }
+
+  .myform .btn-get-started,
+  .myform .btn-watch-video {
+    font-size: 13px;
+  }
+}
+
+
+.myform .card {
+  width: 100%;
+  max-width: none; /* Allow the card to take up the full width */
+  background: #b6d6e6b8;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(123, 83, 83, 0.1);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+.myform .card h3 {
+  color: #333;
+  font-size: 18px; /* Increase the font size for better readability on smaller screens */
+}
+
+.myform .card p {
+  color: #555;
+  font-size: 14px;
+}
+
+@media (max-width: 767px) {
+  .myform .card {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .myform .card h3 {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+}
+
+
 
 /*--------------------------------------------------------------
 # myagent Section
@@ -1326,18 +1467,6 @@ section {
 
 
 
-/*--------------------------------------------------------------
-# myform Section
---------------------------------------------------------------*/
-.myform {
-  width: 100%;
-  min-height: 100vh;
-  background-color: #1B2F45;
-  background-size: cover;
-  position: relative;
-  padding: 120px 0;
-  z-index: 3;
-}
 
 
 
