@@ -24,7 +24,11 @@ import AboutAgent from '../views/AgentPage/AboutPage.vue'
 
 
 import HomeAdmin from '../views/Admin/HomeAdmin.vue'
+import AboutAdmin from '../views/Admin/AboutPage.vue'
+import profile from '../views/Admin/profile.vue'
 import Dash from '../views/Admin/Dash.vue'
+import ManageAgent from '../views/Admin/ManageAgent.vue'
+import ManageApplicant from '../views/Admin/ManageApplicant.vue'
 
 
 const routes = [
@@ -79,6 +83,14 @@ const routes = [
    
   },
   {
+    path: '/AboutAdmin',
+    component: AboutAdmin,
+  },
+  {
+    path: '/profile',
+    component: profile,
+  },
+  {
     path: '/AboutAgent',
     component: AboutAgent,
     //meta: { requiresAuth: true, allowedRoles: ['agent'] }
@@ -129,6 +141,14 @@ const routes = [
     path: '/Dash',
     component: Dash,
     //meta: { requiresAuth: true, allowedRoles: ['admin'] }
+  },
+  {
+    path: '/ManageAgent',
+    component: ManageAgent,
+  },
+  {
+    path: '/ManageApplicant',
+    component: ManageApplicant,
   },
 ]
 

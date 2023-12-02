@@ -12,10 +12,10 @@
   
           <nav id="navbar" class="navbar">
             <ul>
-              <li> <a  class="logo d-flex align-items-center" href="/Agent"> <h1 class="d-flex align-items-right">ALLIANZ</h1></a></li>
-              <li><a href="/Agent" class="active">Home</a></li>
-              <li><a href="/AboutAgent">About</a></li>
-              <li><a href="/PortfolioAgent" >Portfolio</a></li>
+              <li> <a  class="logo d-flex align-items-center" href="/Admin"> <h1 class="d-flex align-items-right">ALLIANZ</h1></a></li>
+              <li><a href="/Admin" class="active">Home</a></li>
+              <li><a href="/AboutAdmin">About</a></li>
+              <li><a href="/Dash" >Dashboard</a></li>
               <li><a href="/">Logout</a></li>
             </ul>
           </nav><!-- .navbar -->
@@ -34,7 +34,7 @@
                 <a>Success in securing the job isn't solely dependent on your capacity to merely adapt. It hinges on your ability to adapt more swiftly than other applicants, aligning with the evolving needs and expectations of employers and the dynamic nature of the job market.</a>
               </blockquote>
               <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
-                <a href="/PortfolioApplicant" class="btn-get-started">Get Started</a>
+                <a href="/Dash" class="btn-get-started">Get Started</a>
               </div>
             </div>
           </div>
