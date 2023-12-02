@@ -355,9 +355,10 @@ section {
     z-index: 99;
     opacity: 0;
     visibility: hidden;
-    background: #fff;
+    background: rgba(190, 203, 216, 0.759);
     box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
     transition: 0.2s;
+    border-radius: 15%;
   }
 
   .navbar .dropdown ul li {
@@ -784,7 +785,7 @@ section {
 .myform {
   width: 100%;
   min-height: 100vh;
-  background: url("../img/images5.jpg") top center;
+  background: url("../img/vec.gif") top center;
   background-size: cover;
   position: relative;
   padding: 120px 0;
@@ -795,7 +796,7 @@ section {
 .myform:before {
   position: absolute;
   content: "";
-  background: rgba(27, 47, 69, 0.851);
+  background: rgba(151, 166, 182, 0.786);
   inset: 0;
 }
 
@@ -888,7 +889,7 @@ section {
 
 
 .myform .card {
-  width: 100%;
+  width: 75%;
   max-width: none; /* Allow the card to take up the full width */
   background: #b6d6e6b8;
   border-radius: 10px;
@@ -1045,7 +1046,7 @@ section {
 .myadmin {
   width: 100%;
   min-height: 100vh;
-  background: url("../img/gif1.gif") top center;
+  background: url("../img/vec.gif") top center;
   background-size: cover;
   position: relative;
   padding: 120px 0;
@@ -1185,7 +1186,7 @@ section {
 .myport {
   width: 100%;
   min-height: 100vh;
-  background: url("../img/images10.jpg") top center;
+ 
   background-size: cover;
   position: relative;
   padding: 120px 0;
@@ -1196,7 +1197,7 @@ section {
 .myport:before {
   position: absolute;
   content: "";
-  background: rgba(27, 47, 69, 0.6);
+  
   inset: 0;
 }
 
@@ -1297,7 +1298,6 @@ section {
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  margin-top: 40px;
   box-sizing: border-box;
 }
 

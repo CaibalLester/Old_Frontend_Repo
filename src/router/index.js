@@ -13,9 +13,6 @@ import PortfolioApplicant from '../views/ApplicantPage/PortfolioApplicant.vue'
 import AboutApplicant from '../views/ApplicantPage/AboutPage.vue'
 import FormA from '../views/ApplicantPage/FormA.vue'
 import FormB from '../views/ApplicantPage/FormB.vue'
-import FormC from '../views/ApplicantPage/FormC.vue'
-import FormD from '../views/ApplicantPage/FormD.vue'
-import FormE from '../views/ApplicantPage/FormE.vue'
 
 
 import HomeAgent from '../views/AgentPage/HomeAgent.vue'
@@ -116,24 +113,6 @@ const routes = [
   {
     path: '/formB',
     component: FormB,
-    //meta: { requiresAuth: true, allowedRoles: ['applicant'] }
-   
-  },
-  {
-    path: '/formC',
-    component: FormC,
-    //meta: { requiresAuth: true, allowedRoles: ['applicant'] }
-   
-  },
-  {
-    path: '/formD',
-    component: FormD,
-    //meta: { requiresAuth: true, allowedRoles: ['applicant'] }
-   
-  },
-  {
-    path: '/formE',
-    component: FormE,
     //meta: { requiresAuth: true, allowedRoles: ['applicant'] }
    
   },

@@ -13,23 +13,17 @@
           <nav id="navbar" class="navbar">
             <ul>
               <li> <a  class="logo d-flex align-items-center" href="/Applicant"> <h1 class="d-flex align-items-right">ALLIANZ</h1></a></li>
-              <li><a href="/Applicant" class="active">Home</a></li>
-              <li class="dropdown"><a href="#"><span>Company Forms</span> <i
+              <li><a href="/Applicant" >Home</a></li>
+              <li><a href="/AboutApplicant">About</a></li>
+              <li><a href="/PortfolioApplicant" >Portfolio</a></li>
+              <li class="dropdown"><a href="#" class="active"><span>Company Forms</span> <i
                     class="bi bi-chevron-down dropdown-indicator"></i></a>
                 <ul>
-                  <li class="dropdown"><a href="#"><span>Forms</span> <i
-                        class="bi bi-chevron-down dropdown-indicator"></i></a>
-                    <ul>
-                      <li><a href="/FormA">Form A</a></li>
+                      <li><a href="/FormA" class="active">Form A</a></li>
                       <li><a href="/FormB">Form B</a></li>
-                      <li><a href="/FormC">Form C</a></li>
-                      <li><a href="/FormD">Form D</a></li>
-                      <li><a href="/FormE">Form E</a></li>
-                    </ul>
-                  </li>
                 </ul>
               </li>
-              <li><a href="/Applicant">Logout</a></li>
+              <li><a href="/">Logout</a></li>
             </ul>
           </nav><!-- .navbar -->
   

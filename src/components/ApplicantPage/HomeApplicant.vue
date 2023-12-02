@@ -19,16 +19,8 @@
               <li class="dropdown"><a href="#"><span>Company Forms</span> <i
                     class="bi bi-chevron-down dropdown-indicator"></i></a>
                 <ul>
-                  <li class="dropdown"><a href="#"><span>Forms</span> <i
-                        class="bi bi-chevron-down dropdown-indicator"></i></a>
-                    <ul>
                       <li><a href="/FormA">Form A</a></li>
                       <li><a href="/FormB">Form B</a></li>
-                      <li><a href="/FormC">Form C</a></li>
-                      <li><a href="/FormD">Form D</a></li>
-                      <li><a href="/FormE">Form E</a></li>
-                    </ul>
-                  </li>
                 </ul>
               </li>
               <li><a href="/">Logout</a></li>

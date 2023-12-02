@@ -214,6 +214,10 @@
                         <h1 class="h2 mb-0">Agent Information</h1>
                     </div>
 
+                    <form class="custom-form header-form ms-lg-3 ms-md-3 me-lg-auto me-md-auto order-2 order-lg-0 order-md-0" action="#" method="get" role="form">
+                        <input class="form-control" name="search" type="text" placeholder="Search" aria-label="Search">
+                    </form>
+                    
                     <div class="row my-4">
                         <div class="col-lg-12 col-12">
                             <div class="custom-block bg-white">

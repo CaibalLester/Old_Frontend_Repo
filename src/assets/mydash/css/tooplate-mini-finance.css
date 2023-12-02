@@ -22,6 +22,7 @@ https://www.tooplate.com/view/2135-mini-finance
   --p-color:                      #717275;
   --border-color:                 #e0e0e5;
   --link-hover-color:             #1D3557;
+  --mypage-color:                 #8eabd47c;
 
   --body-font-family:             'Unbounded';
 
@@ -134,7 +135,7 @@ strong {
   SECTION               
 -----------------------------------------*/
 .main-wrapper {
-  background: var(--section-bg-color);
+  background: var(--mypage-color);
   min-height: calc(100vh - 65px);
 }
 
@@ -382,7 +383,7 @@ strong {
   myNAVIGATION              
 -----------------------------------------*/
 .sidebar {
-  background: var(--white-color);
+  background: var(---white-color);
   position: fixed;
   top: 0;
   bottom: 0;
