@@ -12,7 +12,7 @@
                         <div class="col-md-3 col-lg-3 me-0 px-3 fs-6">
                             <a class="mynavbar-brand">
                                
-                                ALLIANZ ADMIN
+                                ALLIANZ AGENT
                             </a>
                         </div>
     
@@ -147,7 +147,7 @@
                             </li>
 
                             <li>
-                                <a class="dropdown-item" href="/profile">
+                                <a class="dropdown-item" href="/ProfileAgent">
                                     <i class="bi-person me-2"></i>
                                     Profile
                                 </a>
@@ -173,34 +173,27 @@
                     <div class="position-sticky py-4 px-3 sidebar-sticky">
                         <ul class="mynav flex-column h-100">
                             <div class="mynav-item">
-                                <a class="mynavdivnk " aria-current="page" href="/Dash">
+                                <a class="mynavdivnk " aria-current="page" href="/DashAgent">
                                     <i class="bi-house-fill me-4"></i>
                                     Overview
                                 </a>
                             </div>
 
                             <div class="mynav-item pt-2">
-                                <a class="mynav-link" href="/ManageAgent">
-                                    <i class="bi-wallet me-4"></i>
-                                    Agent Information
-                                </a>
-                            </div>
-
-                            <div class="mynav-item pt-2">
-                                <a class="mynav-link" href="/ManageApplicant">
+                                <a class="mynav-link" href="/ApplicantManage">
                                     <i class="bi-wallet me-4"></i>
                                     Applicant Information
                                 </a>
                             </div>
 
                             <div class="mynav-item pt-2">
-                                <a class="mynav-link active" href="/profile">
+                                <a class="mynav-link active" href="/ProfileAgent">
                                     <i class="bi-person me-4"></i>
                                     Profile
                                 </a>
                             </div>
                             <div class="mynav-item border-top mt-auto pt-5">
-                                <a class="mynav-link" href="/Admin">
+                                <a class="mynav-link" href="/Agent">
                                     <i class="bi-box-arrow-left me-2"></i>
                                     Go Back Home
                                 </a>
@@ -300,7 +293,7 @@
 
                                 <div class="tab-content" id="myTabContent">
                                     <div class="tab-pane fade show active" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-                                        <h6 class="mb-4">Admin Profile</h6>
+                                        <h6 class="mb-4">Agent Profile</h6>
 
                                         <form class="custom-form profile-form" action="#" method="post" role="form">
                                             <input class="form-control" type="text" name="profile-name" id="profile-name" placeholder="Les Cai">

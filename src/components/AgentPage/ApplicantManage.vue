@@ -12,7 +12,7 @@
                         <div class="col-md-3 col-lg-3 me-0 px-3 fs-6">
                             <a class="mynavbar-brand">
                                 
-                                ALLIANZ ADMIN
+                                ALLIANZ AGENT
                             </a>
                         </div>
     
@@ -147,14 +147,14 @@
                             </li>
 
                             <li>
-                                <a class="dropdown-item" href="/profile">
+                                <a class="dropdown-item" href="/ProfileAgent">
                                     <i class="bi-person me-2"></i>
                                     Profile
                                 </a>
                             </li>
 
                             <li class="border-top mt-3 pt-2 mx-4">
-                                <a class="dropdown-item ms-0 me-0" href="#">
+                                <a class="dropdown-item ms-0 me-0" href="/">
                                     <i class="bi-box-arrow-left me-2"></i>
                                     Logout
                                 </a>
@@ -173,34 +173,26 @@
                     <div class="position-sticky py-4 px-3 sidebar-sticky">
                         <ul class="mynav flex-column h-100">
                             <div class="mynav-item">
-                                <a class="mynavdivnk " aria-current="page" href="/Dash">
+                                <a class="mynavdivnk" aria-current="page" href="/DashAgent">
                                     <i class="bi-house-fill me-4"></i>
                                     Overview
                                 </a>
                             </div>
-
                             <div class="mynav-item pt-2">
-                                <a class="mynav-link active" href="/ManageAgent">
-                                    <i class="bi-wallet me-4"></i>
-                                    Agent Information
-                                </a>
-                            </div>
-
-                            <div class="mynav-item pt-2">
-                                <a class="mynav-link" href="/ManageApplicant">
+                                <a class="mynav-link active" href="/ApplicantManage">
                                     <i class="bi-wallet me-4"></i>
                                     Applicant Information
                                 </a>
                             </div>
 
                             <div class="mynav-item pt-2">
-                                <a class="mynav-link" href="/profile">
+                                <a class="mynav-link" href="/ProfileAgent">
                                     <i class="bi-person me-4"></i>
                                     Profile
                                 </a>
                             </div>
                             <div class="mynav-item border-top mt-auto pt-5">
-                                <a class="mynav-link" href="/Admin">
+                                <a class="mynav-link" href="/Agent">
                                     <i class="bi-box-arrow-left me-2"></i>
                                     Go Back Home
                                 </a>
@@ -209,9 +201,11 @@
                     </div>
                 </nav>
     
+                
                     <main class="main-wrapper col-md-9 ms-sm-auto py-4 col-lg-9 px-md-4 border-start">
+
                     <div class="title-group mb-3">
-                        <h1 class="h2 mb-0">Agent Information</h1>
+                        <h1 class="h2 mb-0">Applicant Information</h1>
                     </div>
 
                     <form class="custom-form header-form ms-lg-3 ms-md-3 me-lg-auto me-md-auto order-2 order-lg-0 order-md-0" action="#" method="get" role="form">
@@ -622,6 +616,7 @@
 
                     
                 </main>
+
 
                 </div>
             </div>

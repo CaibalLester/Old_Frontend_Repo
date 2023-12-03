@@ -18,6 +18,9 @@ import FormB from '../views/ApplicantPage/FormB.vue'
 import HomeAgent from '../views/AgentPage/HomeAgent.vue'
 import PortfolioAgent from '../views/AgentPage/PortfolioAgent.vue'
 import AboutAgent from '../views/AgentPage/AboutPage.vue'
+import DashAgent from '../views/AgentPage/DashAgent.vue'
+import ProfileAgent from '../views/AgentPage/ProfileAgent.vue'
+import ApplicantManage from '../views/AgentPage/ApplicantManage.vue'
 
 
 import HomeAdmin from '../views/Admin/HomeAdmin.vue'
@@ -91,6 +94,18 @@ const routes = [
     path: '/AboutAgent',
     component: AboutAgent,
     //meta: { requiresAuth: true, allowedRoles: ['agent'] }
+  },
+  {
+    path: '/DashAgent',
+    component: DashAgent,
+  },
+  {
+    path: '/ProfileAgent',
+    component: ProfileAgent,
+  },
+  {
+    path: '/ApplicantManage',
+    component: ApplicantManage,
   },
   {
     path: '/LogIn',

@@ -1,32 +1,48 @@
 <template>
-    <body class="page-index">
-  
-      <!-- ======= Header ======= -->
-      <header id="header" class="header d-flex align-items-center fixed-top">
-        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+  <body class="page-index">
 
-          <a  class="logo d-flex align-items-center"></a>
-  
-          <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-          <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-  
-          <nav id="navbar" class="navbar">
+    <!-- ======= Header ======= -->
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+        <a  class="logo d-flex align-items-center"></a>
+
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+        <nav id="navbar" class="navbar">
             <ul>
               <li> <a  class="logo d-flex align-items-center" href="/Agent"> <h1 class="d-flex align-items-right">ALLIANZ</h1></a></li>
               <li><a href="/Agent">Home</a></li>
               <li><a href="/AboutAgent">About</a></li>
               <li><a href="/PortfolioAgent" class="active">Portfolio</a></li>
-              <li><a href="#" >Commission</a></li>
+              <li><a href="/DashAgent" >Overview</a></li>
               <li><a href="/">Logout</a></li>
             </ul>
           </nav><!-- .navbar -->
-  
-        </div>
-      </header>
-      <!-- End Header -->
-  
-     <!-- ======= myagentport Section ======= -->
-<section id="myagentport" class="myagentport d-flex align-items-center">
+
+      </div>
+    </header>
+    <!-- End Header -->
+
+<main id="main">
+<!-- ======= Breadcrumbs ======= -->
+<div class="breadcrumbs d-flex align-items-center">
+  <div class="container position-relative d-flex flex-column align-items-center">
+
+    <h2>Portfolio</h2>
+    <ol>
+      <li><a href="/Agent">Home</a></li>
+      <li>Portfolio</li>
+    </ol>
+
+  </div>
+</div><!-- End Breadcrumbs -->
+
+
+   
+     <!-- ======= myport Section ======= -->
+<section id="myport" class="myport d-flex align-items-center">
   <div class="container">
 
         <div class="row">
@@ -68,13 +84,23 @@
        
     </div>
   </div>
-</section><!-- End myagentport Section -->
+</section><!-- End myport Section -->
 
   
-    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
-        class="bi bi-arrow-up-short"></i></a>
-  
-    <div id="preloader"></div>
-  </body>
-  </template>
-  
+
+
+</main><!-- End #main -->
+
+
+
+
+   
+
+     
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+</body>
+</template>

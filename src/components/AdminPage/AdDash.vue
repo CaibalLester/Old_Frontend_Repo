@@ -12,7 +12,7 @@
                     <div class="col-md-3 col-lg-3 me-0 px-3 fs-6">
                         <a class="mynavbar-brand">
                             
-                            ALLIANZ PNB ADMIN
+                            ALLIANZ ADMIN
                         </a>
                     </div>
 
@@ -153,7 +153,7 @@
                             </li>
 
                             <li class="border-top mt-3 pt-2 mx-4">
-                                <a class="dropdown-item ms-0 me-0" href="#">
+                                <a class="dropdown-item ms-0 me-0" href="/">
                                     <i class="bi-box-arrow-left me-2"></i>
                                     Logout
                                 </a>
@@ -260,7 +260,7 @@
                                 <div class="custom-block-profile-image-wrap mb-4">
                                     <img src="@/assets/mydash/images/medium-shot-happy-man-smiling.jpg" class="custom-block-profile-image img-fluid" alt="">
 
-                                    <a href="setting.html" class="bi-pencil-square custom-block-edit-icon"></a>
+                                    <a href="/profile" class="bi-pencil-square custom-block-edit-icon"></a>
                                 </div>
 
                                 <p class="d-flex flex-wrap mb-2">

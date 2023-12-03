@@ -12,7 +12,7 @@
                         <div class="col-md-3 col-lg-3 me-0 px-3 fs-6">
                             <a class="mynavbar-brand">
                                 
-                                ALLIANZ PNB ADMIN
+                                ALLIANZ ADMIN
                             </a>
                         </div>
     

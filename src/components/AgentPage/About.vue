@@ -13,10 +13,10 @@
           <nav id="navbar" class="navbar">
             <ul>
               <li> <a  class="logo d-flex align-items-center" href="/Agent"> <h1 class="d-flex align-items-right">ALLIANZ</h1></a></li>
-              <li><a href="/Agent">Home</a></li>
+              <li><a href="/Agent" >Home</a></li>
               <li><a href="/AboutAgent" class="active">About</a></li>
               <li><a href="/PortfolioAgent" >Portfolio</a></li>
-              <li><a href="#" >Commission</a></li>
+              <li><a href="/DashAgent" >Overview</a></li>
               <li><a href="/">Logout</a></li>
             </ul>
           </nav><!-- .navbar -->

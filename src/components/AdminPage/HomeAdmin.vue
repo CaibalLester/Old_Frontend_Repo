@@ -15,7 +15,7 @@
               <li> <a  class="logo d-flex align-items-center" href="/Admin"> <h1 class="d-flex align-items-right">ALLIANZ</h1></a></li>
               <li><a href="/Admin" class="active">Home</a></li>
               <li><a href="/AboutAdmin">About</a></li>
-              <li><a href="/Dash" >Dashboard</a></li>
+              <li><a href="/Dash" >Overview</a></li>
               <li><a href="/">Logout</a></li>
             </ul>
           </nav><!-- .navbar -->
